@@ -1,0 +1,150 @@
+/* =========================================
+   GRID SECTION
+========================================= */
+
+.case-study-grid-section {
+  position: relative;
+
+  padding: 35px 0 120px;
+
+  background: #f7f7f5;
+}
+
+
+.case-study-grid-container {
+  width: min(1380px, calc(100% - 12vw));
+
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.case-study-grid-header {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 60px;
+
+  margin-bottom: 65px;
+
+  padding-bottom: 25px;
+
+  border-bottom: 1px solid #ddddda;
+}
+
+
+.case-study-grid-label {
+  display: block;
+
+  margin-bottom: 15px;
+
+  color: #8a8a8a;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.2em;
+}
+
+
+.case-study-grid-header h2 {
+  margin: 0;
+
+  color: #111111;
+
+  font-size: clamp(38px, 4vw, 62px);
+
+  font-weight: 800;
+
+  line-height: 0.95;
+
+  letter-spacing: -0.06em;
+}
+
+
+.case-study-grid-header h2 span {
+  color: #929292;
+}
+
+
+.case-study-grid-header > p {
+  max-width: 420px;
+
+  margin: 0;
+
+  color: #6d6d6d;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.case-study-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 24px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 850px) {
+  .case-study-grid-container {
+    width: calc(100% - 70px);
+  }
+
+  .case-study-grid-header {
+    display: block;
+
+    margin-bottom: 45px;
+  }
+
+  .case-study-grid-header > p {
+    margin-top: 20px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+  .case-study-grid-section {
+    padding-bottom: 80px;
+  }
+
+  .case-study-grid-container {
+    width: calc(100% - 40px);
+  }
+
+  .case-study-grid-header {
+    margin-bottom: 35px;
+  }
+
+  .case-study-grid-header h2 {
+    font-size: 39px;
+  }
+
+  .case-study-grid {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+  }
+}

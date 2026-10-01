@@ -1,0 +1,395 @@
+/* =========================================================
+   REPLICA LAB
+   SERVICE DETAIL HERO
+========================================================= */
+
+.service-detail-hero {
+  position: relative;
+
+  width: 100%;
+  min-height: 78vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  padding:
+    170px
+    40px
+    100px;
+
+  background: #ffffff;
+
+  overflow: hidden;
+
+  isolation: isolate;
+}
+
+
+/* =========================================================
+   TECHNICAL GRID
+========================================================= */
+
+.service-detail-grid {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: -1;
+
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(20, 20, 20, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(20, 20, 20, 0.035) 1px,
+      transparent 1px
+    );
+
+  background-size: 75px 75px;
+
+  opacity: 0.8;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.service-detail-hero-inner {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1050px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   META
+========================================================= */
+
+.service-detail-meta {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 28px;
+
+  color: #777777;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.2em;
+
+  line-height: 1;
+
+  text-transform: uppercase;
+}
+
+
+.service-detail-line {
+  width: 28px;
+
+  height: 1px;
+
+  background: #111111;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.service-detail-title {
+  margin: 0;
+
+  color: #111111;
+
+  font-size: clamp(
+    52px,
+    7vw,
+    96px
+  );
+
+  font-weight: 700;
+
+  line-height: 0.98;
+
+  letter-spacing: -0.055em;
+
+  text-align: center;
+
+  text-wrap: balance;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.service-detail-description {
+  width: 100%;
+
+  max-width: 700px;
+
+  margin: 30px auto 0;
+
+  color: #666666;
+
+  font-size: clamp(
+    16px,
+    1.3vw,
+    19px
+  );
+
+  font-weight: 400;
+
+  line-height: 1.7;
+
+  letter-spacing: -0.01em;
+}
+
+
+/* =========================================================
+   BACK LINK
+========================================================= */
+
+.service-detail-back {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 38px;
+
+  padding:
+    13px
+    18px;
+
+  border: 1px solid #d8d8d8;
+
+  border-radius: 999px;
+
+  background: #ffffff;
+
+  color: #111111;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.service-detail-back span {
+  font-size: 15px;
+
+  line-height: 1;
+
+  transition:
+    transform 0.25s ease;
+}
+
+
+.service-detail-back:hover {
+  background: #111111;
+
+  border-color: #111111;
+
+  color: #ffffff;
+
+  transform: translateY(-2px);
+}
+
+
+.service-detail-back:hover span {
+  transform: translateX(-3px);
+}
+
+
+/* =========================================================
+   BOTTOM LINE
+========================================================= */
+
+.service-detail-hero::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+
+  bottom: 0;
+
+  width: min(900px, 70%);
+
+  height: 1px;
+
+  transform: translateX(-50%);
+
+  background: #dedede;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .service-detail-hero {
+    min-height: 75svh;
+
+    padding:
+      150px
+      30px
+      90px;
+  }
+
+
+  .service-detail-title {
+    font-size: clamp(
+      48px,
+      8vw,
+      78px
+    );
+  }
+
+
+  .service-detail-description {
+    max-width: 650px;
+
+    font-size: 17px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .service-detail-hero {
+    min-height: 72svh;
+
+    padding:
+      130px
+      20px
+      70px;
+  }
+
+
+  .service-detail-grid {
+    background-size: 55px 55px;
+
+    opacity: 0.55;
+  }
+
+
+  .service-detail-meta {
+    margin-bottom: 22px;
+
+    font-size: 9px;
+
+    letter-spacing: 0.17em;
+  }
+
+
+  .service-detail-title {
+    font-size: clamp(
+      42px,
+      12vw,
+      62px
+    );
+
+    line-height: 1;
+
+    letter-spacing: -0.05em;
+  }
+
+
+  .service-detail-description {
+    max-width: 500px;
+
+    margin-top: 25px;
+
+    font-size: 15px;
+
+    line-height: 1.65;
+  }
+
+
+  .service-detail-back {
+    margin-top: 30px;
+
+    padding:
+      12px
+      16px;
+
+    font-size: 11px;
+  }
+
+
+  .service-detail-hero::after {
+    width: 75%;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .service-detail-hero {
+    padding:
+      120px
+      16px
+      60px;
+  }
+
+
+  .service-detail-title {
+    font-size: 40px;
+  }
+
+
+  .service-detail-description {
+    font-size: 14px;
+  }
+
+}

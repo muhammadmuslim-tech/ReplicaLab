@@ -1,0 +1,118 @@
+.contact-hero {
+  position: relative;
+  min-height: 690px;
+  padding: 70px 6vw 60px;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  color: #111;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.contact-hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.045) 3px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.045) 3px, transparent 1px);
+  background-size: 105px 105px;
+  mask-image: linear-gradient(to bottom, black, transparent 92%);
+  pointer-events: none;
+}
+
+.contact-hero-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1450px;
+  margin: 0 auto;
+}
+
+.contact-hero-label {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 40px;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  color: #929292;
+}
+
+/* .contact-hero-label span:last-child {
+  color: #929292;
+} */
+
+.contact-hero-label-line {
+  width: 38px;
+  height: 1px;
+  background: #aaa;
+}
+
+.contact-hero h1 {
+  max-width: 1050px;
+  margin: 0;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: clamp(65px, 7.2vw, 108px);
+  font-weight: 800;
+  line-height: 0.92;
+  letter-spacing: -0.065em;
+}
+
+.contact-hero h1 span {
+  display: block;
+  color: #929292;
+}
+
+.contact-hero p {
+  max-width: 720px;
+  margin: 34px 0 0;
+  color: #626262;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.contact-hero-bottom {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 13px;
+  margin-top: 52px;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: #777;
+}
+
+.contact-hero-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #111;
+}
+
+@media (max-width: 700px) {
+  .contact-hero {
+    min-height: auto;
+    padding: 125px 22px 65px;
+  }
+
+  .contact-hero-grid {
+    background-size: 72px 72px;
+  }
+
+  .contact-hero h1 {
+    font-size: clamp(52px, 14vw, 72px);
+  }
+
+  .contact-hero p {
+    margin-top: 25px;
+    font-size: 14px;
+  }
+
+  .contact-hero-bottom {
+    margin-top: 38px;
+    gap: 10px;
+  }
+}

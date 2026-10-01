@@ -1,0 +1,1150 @@
+/* =========================================================
+   WORKFLOW AUTOMATION DETAIL PAGE
+========================================================= */
+
+.workflow-automation-page {
+    --ai-black: #111111;
+    --ai-dark: #151515;
+    --ai-white: #ffffff;
+    --ai-light: #f4f4f2;
+    --ai-border: #d8d8d4;
+    --ai-muted: #777773;
+    --ai-soft: #999995;
+
+    width: 100%;
+    overflow: hidden;
+
+    background: var(--ai-white);
+    color: var(--ai-black);
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.workflow-automation-container {
+    width: min(1320px, calc(100% - 96px));
+    margin: 0 auto;
+    height: screen;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.workflow-automation-hero {
+    position: relative;
+
+    min-height: 630px;
+
+    padding: 150px 0 55px;
+
+    background: var(--ai-white);
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   HERO STRUCTURAL LINES
+========================================================= */
+
+.workflow-automation-hero-structure {
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+}
+
+.workflow-automation-hero-structure span {
+    position: absolute;
+
+    display: block;
+
+    background: #e8e8e5;
+}
+
+.workflow-automation-hero-structure span:nth-child(1) {
+    top: 0;
+    bottom: 0;
+    left: 18%;
+    width: 1px;
+}
+
+.workflow-automation-hero-structure span:nth-child(2) {
+    top: 0;
+    bottom: 0;
+    left: 68%;
+    width: 1px;
+}
+
+.workflow-automation-hero-structure span:nth-child(3) {
+    top: 31%;
+    left: 0;
+    right: 0;
+    height: 1px;
+}
+
+.workflow-automation-hero-structure span:nth-child(4) {
+    top: 72%;
+    left: 0;
+    right: 0;
+    height: 1px;
+}
+
+
+/* =========================================================
+   HERO TOPLINE
+========================================================= */
+
+.workflow-automation-hero-topline {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid var(--ai-border);
+}
+
+.workflow-automation-hero-id {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 0.18em;
+}
+
+.workflow-automation-hero-dot {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: var(--ai-black);
+}
+
+.workflow-automation-hero-index {
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+
+    color: var(--ai-soft);
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.workflow-automation-hero-content {
+    position: relative;
+
+    /* padding-top: 72px; */
+}
+
+.workflow-automation-hero-label {
+    margin-bottom: 28px;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 0.2em;
+
+    color: #8c8c87;
+}
+
+.workflow-automation-hero-content h1 {
+    margin: 0;
+
+    font-size: clamp(95px, 13vw, 150px);
+
+    line-height: 0.82;
+
+    font-weight: 600;
+
+    letter-spacing: -0.075em;
+}
+
+.workflow-automation-hero-content h1 span {
+    display: block;
+
+    margin-left: 10.5vw;
+
+    /* color: #8b8b87; */
+    background-image: linear-gradient(105deg, black, #8b8b87 40%, black, black);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* =========================================================
+   HERO DESCRIPTION
+========================================================= */
+
+.workflow-automation-hero-description {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 18px;
+
+    max-width: 520px;
+
+    margin: 70px 0 0 auto;
+}
+
+.workflow-automation-hero-line {
+    flex: 0 0 30px;
+
+    width: 30px;
+    height: 2px;
+
+    margin-top: 15px;
+
+    background: var(--ai-black);
+}
+
+.workflow-automation-hero-description p {
+    margin: 0;
+
+    font-size: 16px;
+
+    line-height: 1.75;
+
+    color: #666663;
+}
+
+
+/* =========================================================
+   HERO BOTTOM
+========================================================= */
+
+.workflow-automation-hero-bottom {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 55px;
+
+    width: min(1320px, calc(100% - 96px));
+
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 8px;
+    font-weight: 800;
+
+    letter-spacing: 0.18em;
+
+    color: #999995;
+}
+
+
+/* =========================================================
+   SECTION MARKER
+========================================================= */
+
+.workflow-automation-section-marker {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 32px;
+}
+
+.workflow-automation-section-marker span {
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+
+    color: #777773;
+}
+
+.workflow-automation-section-marker i {
+    width: 24px;
+    height: 1px;
+
+    background: #111111;
+}
+
+.workflow-automation-section-marker small {
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.18em;
+
+    color: #8d8d88;
+}
+
+
+/* =========================================================
+   OVERVIEW
+========================================================= */
+
+.workflow-automation-overview-section {
+    padding: 80px 0 60px;
+
+    background: var(--ai-light);
+}
+
+
+/*
+   IMPORTANT:
+   Heading is now ABOVE paragraph.
+*/
+
+.workflow-automation-overview-layout {
+    display: block;
+}
+
+
+/* =========================================================
+   OVERVIEW HEADING
+========================================================= */
+
+.workflow-automation-overview-heading {
+    max-width: 950px;
+}
+
+.workflow-automation-overview-heading>span {
+    display: block;
+
+    margin-bottom: 20px;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 0.2em;
+
+    color: #858580;
+}
+
+.workflow-automation-overview-heading h2 {
+    margin: 0;
+
+    font-size: clamp(52px, 7vw, 92px);
+
+    line-height: 0.94;
+
+    font-weight: 600;
+
+    letter-spacing: -0.065em;
+}
+
+
+/* .workflow-automation-overview-heading h2 br{
+    background-image: linear-gradient(120deg, black,#8b8b87,#8b8b87 );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+} */
+
+.workflow-automation-overview-heading h2 span {
+    background-image: linear-gradient(105deg, black, #8b8b87, #8b8b87);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* color: white; */
+}
+
+
+/* =========================================================
+   OVERVIEW CONTENT
+========================================================= */
+
+.workflow-automation-overview-content {
+    width: min(880px, 100%);
+
+    margin-left: auto;
+
+    margin-top: 40px;
+}
+
+.workflow-automation-overview-lead {
+    margin: 0;
+
+    font-size: 18px;
+
+    line-height: 1.85;
+
+    color: #555552;
+}
+
+
+/* =========================================================
+   SYSTEM ARCHITECTURE
+========================================================= */
+
+.workflow-automation-overview-system {
+    margin-top: 75px;
+
+    border-top: 1px solid #cfcfcb;
+}
+
+.workflow-automation-system-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 25px 0;
+
+    border-bottom: 1px solid #d5d5d1;
+}
+
+.workflow-automation-system-header span {
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.18em;
+
+    color: #858580;
+}
+
+.workflow-automation-system-row {
+    display: grid;
+
+    grid-template-columns: 200px 1fr;
+
+    align-items: center;
+
+    min-height: 84px;
+
+    border-bottom: 1px solid #d5d5d1;
+}
+
+.workflow-automation-system-row span {
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.16em;
+
+    color: #898985;
+}
+
+.workflow-automation-system-row strong {
+    font-size: 18px;
+
+    font-weight: 600;
+
+    letter-spacing: -0.025em;
+}
+
+
+/* =========================================================
+   BUSINESS IMPACT
+========================================================= */
+
+.workflow-automation-impact-section {
+    padding: 80px 0 80px;
+
+    background: var(--ai-white);
+}
+
+.workflow-automation-section-heading {
+    margin-bottom: 65px;
+}
+
+.workflow-automation-section-heading h2 {
+    max-width: 900px;
+
+    margin: 0;
+
+    font-size: clamp(48px, 6vw, 78px);
+
+    line-height: 0.96;
+
+    font-weight: 600;
+
+    letter-spacing: -0.06em;
+}
+
+
+/* =========================================================
+   BUSINESS IMPACT — BLACK HOVER
+========================================================= */
+
+.workflow-automation-impact-item {
+    display: grid;
+    grid-template-columns: 90px 1fr 50px;
+    gap: 30px;
+    align-items: center;
+
+    padding: 34px 20px;
+
+    border-bottom: 1px solid #d6d6d2;
+
+    /* background: #000; */
+    background: transparent;
+
+    transition:
+        background-color 0.35s ease,
+        color 0.35s ease,
+        padding 0.35s ease;
+}
+
+.workflow-automation-impact-item:hover {
+    background: #111111;
+
+    color: #ffffff;
+
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+/* Number */
+
+.workflow-automation-impact-index {
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+
+    color: #999995;
+
+    transition: color 0.35s ease;
+}
+
+.workflow-automation-impact-item:hover .workflow-automation-impact-index {
+    color: white;
+}
+
+
+/* Heading */
+
+.workflow-automation-impact-main h3 {
+    margin: 0;
+
+    font-size: 24px;
+    line-height: 1.1;
+
+    font-weight: 600;
+    letter-spacing: -0.035em;
+
+    color: #111111;
+
+    transition: color 0.35s ease;
+}
+
+.workflow-automation-impact-item:hover .workflow-automation-impact-main h3 {
+    color: #ffffff;
+}
+
+
+/* Description */
+
+.workflow-automation-impact-main p {
+    max-width: 700px;
+
+    margin: 10px 0 0;
+
+    font-size: 13px;
+    line-height: 1.7;
+
+    color: #72726e;
+
+    transition: color 0.35s ease;
+}
+
+.workflow-automation-impact-item:hover .workflow-automation-impact-main p {
+    color: #b7b7b7;
+}
+
+
+/* Arrow */
+
+.workflow-automation-impact-symbol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    border: 1px solid #d8d8d4;
+    border-radius: 50%;
+
+    font-size: 15px;
+
+    color: #111111;
+
+    transition:
+        background-color 0.35s ease,
+        color 0.35s ease,
+        border-color 0.35s ease,
+        transform 0.35s ease;
+}
+
+.workflow-automation-impact-item:hover .workflow-automation-impact-symbol {
+    background: #ffffff;
+
+    border-color: #ffffff;
+
+    color: #111111;
+
+    transform: translate(2px, -2px);
+}
+
+
+/* =========================================================
+   ENGINEERING OUTPUT — BLACK HOVER
+========================================================= */
+
+.workflow-automation-deliverables-section {
+    padding: 5px 0 80px;
+}
+
+.workflow-automation-deliverable {
+    display: grid;
+    grid-template-columns: 90px 1fr 1.1fr 50px;
+
+    gap: 30px;
+    align-items: center;
+
+    min-height: 120px;
+
+    padding: 0 20px;
+
+    border-bottom: 1px solid #cecec9;
+
+    /* background: #000; */
+    background: transparent;
+
+    transition:
+        background-color 0.35s ease,
+        color 0.35s ease,
+        padding 0.35s ease;
+}
+
+.workflow-automation-deliverable:hover {
+    background: #111111;
+
+    color: #ffffff;
+
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+/* Number */
+
+.workflow-automation-deliverable-number {
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+
+    color: #999995;
+
+    transition: color 0.35s ease;
+}
+
+.workflow-automation-deliverable:hover .workflow-automation-deliverable-number {
+    color: white;
+}
+
+
+/* Title */
+
+.workflow-automation-deliverable-title h3 {
+    margin: 0;
+
+    font-size: 20px;
+
+    line-height: 1.15;
+
+    font-weight: 600;
+
+    letter-spacing: -0.025em;
+
+    color: #111111;
+
+    transition: color 0.35s ease;
+}
+
+.workflow-automation-deliverable:hover .workflow-automation-deliverable-title h3 {
+    color: #ffffff;
+}
+
+
+/* Description */
+
+.workflow-automation-deliverable-description p {
+    margin: 0;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    color: #71716d;
+
+    transition: color 0.35s ease;
+}
+
+.workflow-automation-deliverable:hover .workflow-automation-deliverable-description p {
+    color: #b7b7b7;
+}
+
+
+/* Arrow */
+
+.workflow-automation-deliverable-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    border: 1px solid #d4d4d0;
+
+    border-radius: 50%;
+
+    font-size: 15px;
+
+    color: #111111;
+
+    transition:
+        background-color 0.35s ease,
+        color 0.35s ease,
+        border-color 0.35s ease,
+        transform 0.35s ease;
+}
+
+.workflow-automation-deliverable:hover .workflow-automation-deliverable-arrow {
+    background: #ffffff;
+
+    border-color: #ffffff;
+
+    color: #111111;
+
+    transform: translate(2px, -2px);
+}
+
+
+/* =========================================================
+   CLOSING
+========================================================= */
+
+.workflow-automation-closing-section {
+    padding: 110px 0 120px;
+
+    background: var(--ai-dark);
+
+    color: #ffffff;
+}
+
+.workflow-automation-closing-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid #343434;
+}
+
+.workflow-automation-closing-top span {
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.18em;
+
+    color: #858585;
+}
+
+.workflow-automation-closing-content {
+    padding-top: 75px;
+}
+
+.workflow-automation-closing-label {
+    margin-bottom: 25px;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.2em;
+
+    color: #8d8d8d;
+}
+
+.workflow-automation-closing-content h2 {
+    margin: 0;
+
+    font-size: clamp(52px, 7vw, 95px);
+
+    line-height: 0.94;
+
+    font-weight: 500;
+
+    letter-spacing: -0.065em;
+}
+
+.workflow-automation-closing-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 75px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #343434;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.17em;
+
+    color: #777777;
+}
+
+.workflow-automation-closing-status {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+}
+
+.workflow-automation-closing-status i {
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .workflow-automation-container {
+        width: min(100% - 56px, 850px);
+    }
+
+    .workflow-automation-hero-bottom {
+        width: min(100% - 56px, 850px);
+    }
+
+    .workflow-automation-hero {
+        min-height: 700px;
+    }
+
+    .workflow-automation-hero-content h1 {
+        font-size: clamp(80px, 13vw, 140px);
+    }
+
+    .workflow-automation-overview-content {
+        width: 100%;
+        margin-top: 55px;
+    }
+
+    .workflow-automation-system-row {
+        grid-template-columns: 150px 1fr;
+    }
+
+    .workflow-automation-deliverable {
+        grid-template-columns: 65px 1fr;
+        gap: 20px;
+
+        padding: 30px 0;
+    }
+
+    .workflow-automation-deliverable-description {
+        grid-column: 2;
+    }
+
+    .workflow-automation-deliverable-arrow {
+        grid-column: 2;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .workflow-automation-container {
+        width: calc(100% - 32px);
+    }
+
+    .workflow-automation-hero {
+        min-height: 650px;
+
+        padding: 120px 0 45px;
+    }
+
+    .workflow-automation-hero-structure span:nth-child(1) {
+        left: 15%;
+    }
+
+    .workflow-automation-hero-structure span:nth-child(2) {
+        left: 82%;
+    }
+
+    .workflow-automation-hero-structure span:nth-child(3) {
+        top: 35%;
+    }
+
+    .workflow-automation-hero-structure span:nth-child(4) {
+        top: 78%;
+    }
+
+    .workflow-automation-hero-content {
+        padding-top: 55px;
+    }
+
+    .workflow-automation-hero-label {
+        margin-bottom: 22px;
+    }
+
+    .workflow-automation-hero-content h1 {
+        font-size: clamp(65px, 18vw, 100px);
+    }
+
+    .workflow-automation-hero-content h1 span {
+        margin-left: 8vw;
+    }
+
+    .workflow-automation-hero-description {
+        gap: 12px;
+
+        margin-top: 45px;
+    }
+
+    .workflow-automation-hero-description p {
+        font-size: 13px;
+
+        line-height: 1.7;
+    }
+
+    .workflow-automation-hero-line {
+        flex-basis: 20px;
+        width: 20px;
+    }
+
+    .workflow-automation-hero-bottom {
+        width: calc(100% - 32px);
+
+        bottom: 35px;
+    }
+
+    .workflow-automation-hero-bottom span:last-child {
+        display: none;
+    }
+
+
+    /* =====================================================
+     OVERVIEW
+    ===================================================== */
+
+    .workflow-automation-overview-section {
+        padding: 85px 0 95px;
+    }
+
+    .workflow-automation-section-marker {
+        margin-bottom: 25px;
+    }
+
+    .workflow-automation-overview-heading>span {
+        margin-bottom: 16px;
+    }
+
+    .workflow-automation-overview-heading h2 {
+        font-size: clamp(43px, 12vw, 62px);
+    }
+
+    .workflow-automation-overview-content {
+        margin-top: 40px;
+    }
+
+    .workflow-automation-overview-lead {
+        font-size: 15px;
+
+        line-height: 1.8;
+    }
+
+    .workflow-automation-overview-system {
+        margin-top: 50px;
+    }
+
+    .workflow-automation-system-header {
+        padding: 20px 0;
+    }
+
+    .workflow-automation-system-row {
+        grid-template-columns: 90px 1fr;
+
+        min-height: 70px;
+
+        gap: 15px;
+    }
+
+    .workflow-automation-system-row strong {
+        font-size: 14px;
+    }
+
+
+    /* =====================================================
+     BUSINESS IMPACT
+    ===================================================== */
+
+    .workflow-automation-impact-section {
+        padding: 85px 0 95px;
+    }
+
+    .workflow-automation-section-heading {
+        margin-bottom: 45px;
+    }
+
+    .workflow-automation-section-heading h2 {
+        font-size: clamp(42px, 11vw, 58px);
+    }
+
+    .workflow-automation-impact-item {
+        grid-template-columns: 40px 1fr 38px;
+
+        gap: 12px;
+
+        padding: 25px 0;
+    }
+
+    .workflow-automation-impact-item:hover {
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+
+    .workflow-automation-impact-main h3 {
+        font-size: 18px;
+    }
+
+    .workflow-automation-impact-main p {
+        margin-top: 8px;
+
+        font-size: 12px;
+    }
+
+    .workflow-automation-impact-symbol {
+        width: 32px;
+        height: 32px;
+
+        font-size: 13px;
+    }
+
+
+    /* =====================================================
+     DELIVERABLES
+    ===================================================== */
+
+    .workflow-automation-deliverables-section {
+        padding: 85px 0 95px;
+    }
+
+    .workflow-automation-deliverable {
+        grid-template-columns: 42px 1fr 34px;
+
+        gap: 10px;
+
+        min-height: auto;
+
+        padding: 25px 0;
+    }
+
+    .workflow-automation-deliverable-title {
+        grid-column: 2;
+    }
+
+    .workflow-automation-deliverable-description {
+        grid-column: 2 / 4;
+
+        margin-top: 4px;
+    }
+
+    .workflow-automation-deliverable-arrow {
+        grid-column: 3;
+        grid-row: 1;
+
+        width: 32px;
+        height: 32px;
+    }
+
+    .workflow-automation-deliverable-title h3 {
+        font-size: 17px;
+    }
+
+    .workflow-automation-deliverable-description p {
+        font-size: 12px;
+    }
+
+
+    /* =====================================================
+     CLOSING
+    ===================================================== */
+
+    .workflow-automation-closing-section {
+        padding: 80px 0 90px;
+    }
+
+    .workflow-automation-closing-content {
+        padding-top: 55px;
+    }
+
+    .workflow-automation-closing-content h2 {
+        font-size: clamp(43px, 12vw, 62px);
+    }
+
+    .workflow-automation-closing-footer {
+        margin-top: 55px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .workflow-automation-impact-item,
+    .workflow-automation-impact-symbol,
+    .workflow-automation-deliverable,
+    .workflow-automation-deliverable-arrow {
+        transition: none;
+    }
+
+}

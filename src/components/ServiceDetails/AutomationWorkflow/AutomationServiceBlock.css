@@ -1,0 +1,295 @@
+/* =========================================
+   AUTOMATION SERVICE BLOCK
+========================================= */
+
+.automation-service-block {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 40px;
+
+  padding: 30px 32px;
+
+  background: #ffffff;
+
+  border: 1px solid #d8d8d4;
+
+  border-radius: 30px;
+
+  color: #111111;
+
+  text-decoration: none;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.automation-service-block:hover {
+  transform: translateY(-5px);
+
+  border-color: #111111;
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================
+   TOP
+========================================= */
+
+.automation-service-block-top {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.automation-service-block-number {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 38px;
+  height: 38px;
+
+  border: 1px solid #ddddda;
+
+  border-radius: 50%;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  color: #888888;
+
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.automation-service-block:hover .automation-service-block-number {
+  background: #111111;
+
+  border-color: #111111;
+
+  color: #ffffff;
+}
+
+.automation-service-block-category {
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.18em;
+
+  color: #999999;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.automation-service-block-content {
+  margin-top: auto;
+
+  padding: 45px 0 48px;
+}
+
+.automation-service-block-content h3 {
+  margin: 0;
+
+  font-size: clamp(32px, 3.4vw, 48px);
+
+  line-height: 1;
+
+  font-weight: 600;
+
+  letter-spacing: -0.045em;
+
+  transition: transform 0.35s ease;
+}
+
+.automation-service-block:hover .automation-service-block-content h3 {
+  transform: translateX(5px);
+}
+
+.automation-service-block-content p {
+  max-width: 530px;
+
+  margin: 18px 0 0;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+
+  color: #707070;
+}
+
+
+/* =========================================
+   BOTTOM
+========================================= */
+
+.automation-service-block-bottom {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding-top: 17px;
+
+  border-top: 1px solid #e2e2de;
+}
+
+.automation-service-block-bottom > span:first-child {
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.16em;
+
+  color: #777777;
+}
+
+
+/* =========================================
+   ARROW
+========================================= */
+
+.automation-service-block-arrow {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  border: 1px solid #ddddda;
+
+  border-radius: 50%;
+
+  font-size: 16px;
+
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.automation-service-block:hover .automation-service-block-arrow {
+  background: #111111;
+
+  border-color: #111111;
+
+  color: #ffffff;
+
+  transform: translate(2px, -2px);
+}
+
+
+/* =========================================
+   BOTTOM LINE
+========================================= */
+
+.automation-service-block-line {
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 0;
+  height: 2px;
+
+  background: #111111;
+
+  transition: width 0.45s ease;
+}
+
+.automation-service-block:hover .automation-service-block-line {
+  width: 100%;
+}
+
+
+/* =========================================
+   FOCUS
+========================================= */
+
+.automation-service-block:focus-visible {
+  outline: 2px solid #111111;
+
+  outline-offset: 4px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .automation-service-block {
+    min-height: 300px;
+
+    padding: 25px 23px;
+
+    border-radius: 24px;
+  }
+
+  .automation-service-block-number {
+    width: 34px;
+    height: 34px;
+
+    font-size: 8px;
+  }
+
+  .automation-service-block-category {
+    font-size: 7px;
+  }
+
+  .automation-service-block-content {
+    padding: 35px 0 38px;
+  }
+
+  .automation-service-block-content h3 {
+    font-size: 32px;
+  }
+
+  .automation-service-block-content p {
+    margin-top: 15px;
+
+    font-size: 12px;
+  }
+
+  .automation-service-block-arrow {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .automation-service-block,
+  .automation-service-block-content h3,
+  .automation-service-block-number,
+  .automation-service-block-arrow,
+  .automation-service-block-line {
+    transition: none;
+  }
+}

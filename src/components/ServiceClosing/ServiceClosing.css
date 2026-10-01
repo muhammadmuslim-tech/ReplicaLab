@@ -1,0 +1,740 @@
+/* =========================================
+   SERVICE CLOSING CTA
+========================================= */
+
+.service-closing {
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+  overflow: hidden;
+  isolation: isolate;
+
+  background: #111111;
+  color: #ffffff;
+}
+
+
+/* =========================================
+   TECHNICAL GRID
+========================================= */
+
+.service-closing-grid {
+  position: absolute;
+  inset: 0;
+  z-index: -3;
+
+  opacity: 0.1;
+
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.16) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.16) 1px,
+      transparent 1px
+    );
+
+  background-size: 80px 80px;
+
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    #000000 18%,
+    #000000 82%,
+    transparent 100%
+  );
+
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    #000000 18%,
+    #000000 82%,
+    transparent 100%
+  );
+
+  animation: serviceClosingGridMove 18s linear infinite;
+}
+
+
+/* =========================================
+   BACKGROUND CIRCLES
+========================================= */
+
+.service-closing-circle {
+  position: absolute;
+
+  border: 4px solid rgba(249, 249, 249, 0.233);
+  border-radius: 50%;
+
+  pointer-events: none;
+  z-index: -2;
+}
+
+
+.service-closing-circle-one {
+  width: 620px;
+  height: 620px;
+
+  right: -180px;
+  top: -190px;
+}
+
+
+.service-closing-circle-two {
+  width: 400px;
+  height: 400px;
+
+  right: -70px;
+  top: -80px;
+
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+
+/* =========================================
+   MAIN CONTENT WRAPPER
+========================================= */
+
+.service-closing-content {
+  position: relative;
+
+  width: min(1320px, calc(100% - 80px));
+  min-height: 300px;
+
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 52px 0 34px;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.service-closing-main {
+  width: min(900px, 100%);
+
+  margin: auto;
+
+  text-align: center;
+
+  transform: translateY(-4px);
+}
+
+
+/* =========================================
+   READY FOR DIGITAL TRANSFORMATION
+========================================= */
+
+.service-closing-label {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-bottom: 28px;
+
+  color: rgba(255, 255, 255, 0.58);
+
+  font-size: 10px;
+  line-height: 1;
+
+  letter-spacing: 0.2em;
+  font-weight: 600;
+
+  animation: serviceClosingLabelPulse 3s ease-in-out infinite;
+}
+
+
+/* =========================================
+   PULSE DOT
+========================================= */
+
+.service-closing-pulse {
+  position: relative;
+
+  width: 7px;
+  height: 7px;
+
+  flex: 10px 0 7px;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+}
+
+
+/* Pulse Rings */
+
+.service-closing-pulse::before,
+.service-closing-pulse::after {
+  content: "";
+
+  position: absolute;
+
+  inset: -5px;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+
+  border-radius: 50%;
+
+  animation: serviceClosingPulse 2.2s ease-out infinite;
+}
+
+
+.service-closing-pulse::after {
+  animation-delay: 1.1s;
+}
+
+
+/* =========================================
+   MAIN HEADING
+========================================= */
+
+.service-closing-main h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(48px, 6.2vw, 92px);
+
+  line-height: 0.98;
+
+  letter-spacing: -0.055em;
+
+  font-weight: 500;
+}
+
+
+.service-closing-main h2 span {
+  display: block;
+
+  /* color: rgba(12, 82, 196, 0.742); */
+
+  background: linear-gradient(
+    to right,
+    #ffffff,
+    #ffffff76,
+    #ffffff,
+    #ffffff
+  );
+
+  /* Clip the background to the text text */
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  /* Make the text color transparent so the background shows through */
+
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.service-closing-main p {
+  width: min(600px, 100%);
+
+  margin: 30px auto 0;
+
+  color: rgba(255, 255, 255, 0.58);
+
+  font-size: 16px;
+
+  line-height: 1.75;
+
+  font-weight: 400;
+}
+
+
+/* =========================================
+   CTA BUTTON
+========================================= */
+
+.service-closing-button {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 26px;
+
+  min-width: 275px;
+
+  margin-top: 38px;
+
+  padding: 15px 16px 15px 22px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  border-radius: 999px;
+
+  color: #ffffff;
+
+  background: transparent;
+
+  text-decoration: none;
+
+  overflow: hidden;
+
+  transition:
+    background-color 0.35s ease,
+    color 0.35s ease,
+    border-color 0.35s ease,
+    transform 0.35s ease;
+}
+
+
+/* Button Fill Animation */
+
+.service-closing-button::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: #ffffff;
+
+  transform: translateX(-101%);
+
+  transition:
+    transform 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+
+  z-index: -1;
+}
+
+
+/* Button Text */
+
+.service-closing-button span:first-child {
+  font-size: 10px;
+
+  line-height: 1;
+
+  letter-spacing: 0.14em;
+
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   BUTTON ARROW
+========================================= */
+
+.service-closing-arrow {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 34px;
+  height: 34px;
+
+  flex: 0 0 34px;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  color: #111111;
+
+  font-size: 17px;
+
+  line-height: 1;
+
+  transition:
+    transform 0.35s ease,
+    background-color 0.35s ease,
+    color 0.35s ease;
+}
+
+
+/* =========================================
+   BUTTON HOVER
+========================================= */
+
+.service-closing-button:hover {
+  color: #111111;
+
+  border-color: #ffffff;
+
+  transform: translateY(-2px);
+}
+
+
+.service-closing-button:hover::before {
+  transform: translateX(0);
+}
+
+
+.service-closing-button:hover
+.service-closing-arrow {
+  transform: rotate(45deg);
+
+  background: #111111;
+
+  color: #ffffff;
+}
+
+
+/* =========================================
+   BOTTOM INFORMATION
+========================================= */
+
+.service-closing-bottom {
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+  color: rgba(255, 255, 255, 0.35);
+
+  font-size: 9px;
+
+  line-height: 1;
+
+  letter-spacing: 0.2em;
+
+  font-weight: 600;
+}
+
+
+/* Bottom Line */
+
+.service-closing-line {
+  width: 70px;
+
+  height: 1px;
+
+  background: rgba(255, 255, 255, 0.18);
+}
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes serviceClosingGridMove {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(40px, 40px, 0);
+  }
+}
+
+
+@keyframes serviceClosingPulse {
+  0% {
+    transform: scale(0.45);
+
+    opacity: 0.7;
+  }
+
+  70% {
+    transform: scale(1.8);
+
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1.8);
+
+    opacity: 0;
+  }
+}
+
+
+@keyframes serviceClosingLabelPulse {
+  0%,
+  100% {
+    opacity: 0.72;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .service-closing {
+    min-height: 560px;
+  }
+
+
+  .service-closing-content {
+    width: min(100% - 48px, 720px);
+
+    min-height: 560px;
+
+    padding: 40px 0 28px;
+  }
+
+
+  .service-closing-main {
+    width: 100%;
+
+    transform: none;
+  }
+
+
+  .service-closing-label {
+    margin-bottom: 24px;
+  }
+
+
+  .service-closing-main h2 {
+    font-size: clamp(44px, 8vw, 70px);
+  }
+
+
+  .service-closing-main p {
+    margin-top: 24px;
+
+    font-size: 15px;
+  }
+
+
+  .service-closing-button {
+    margin-top: 30px;
+  }
+
+
+  .service-closing-circle-one {
+    width: 480px;
+    height: 480px;
+
+    right: -220px;
+    top: -140px;
+  }
+
+
+  .service-closing-circle-two {
+    width: 320px;
+    height: 320px;
+
+    right: -120px;
+    top: -60px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .service-closing {
+    min-height: 540px;
+  }
+
+
+  .service-closing-content {
+    width: calc(100% - 36px);
+
+    min-height: 540px;
+
+    padding: 32px 0 24px;
+  }
+
+
+  /* Label */
+
+  .service-closing-label {
+    gap: 8px;
+
+    margin-bottom: 22px;
+
+    font-size: 8px;
+
+    letter-spacing: 0.14em;
+
+    line-height: 1.4;
+  }
+
+
+  .service-closing-pulse {
+    width: 6px;
+    height: 6px;
+
+    flex-basis: 6px;
+  }
+
+
+  /* Heading */
+
+  .service-closing-main h2 {
+    font-size: clamp(40px, 12vw, 58px);
+
+    line-height: 1;
+
+    letter-spacing: -0.05em;
+  }
+
+
+  /* Description */
+
+  .service-closing-main p {
+    margin-top: 22px;
+
+    font-size: 14px;
+
+    line-height: 1.65;
+  }
+
+
+  /* Button */
+
+  .service-closing-button {
+    width: 100%;
+
+    min-width: 0;
+
+    margin-top: 28px;
+
+    padding: 10px 10px 10px 18px;
+
+    gap: 15px;
+  }
+
+
+  .service-closing-button
+  span:first-child {
+    font-size: 9px;
+
+    letter-spacing: 0.1em;
+  }
+
+
+  .service-closing-arrow {
+    width: 34px;
+    height: 34px;
+
+    flex-basis: 34px;
+  }
+
+
+  /* Bottom */
+
+  .service-closing-bottom {
+    gap: 12px;
+
+    font-size: 8px;
+
+    letter-spacing: 0.15em;
+  }
+
+
+  .service-closing-line {
+    width: 35px;
+  }
+
+
+  /* Background Circles */
+
+  .service-closing-circle-one {
+    width: 330px;
+    height: 330px;
+
+    right: -190px;
+    top: -100px;
+  }
+
+
+  .service-closing-circle-two {
+    width: 220px;
+    height: 220px;
+
+    right: -110px;
+    top: -40px;
+  }
+}
+
+
+/* =========================================
+   VERY SMALL DEVICES
+========================================= */
+
+@media (max-width: 380px) {
+
+  .service-closing-content {
+    width: calc(100% - 28px);
+  }
+
+
+  .service-closing-label {
+    font-size: 7px;
+
+    letter-spacing: 0.11em;
+  }
+
+
+  .service-closing-main h2 {
+    font-size: 38px;
+  }
+
+
+  .service-closing-main p {
+    font-size: 13px;
+  }
+
+
+  .service-closing-button
+  span:first-child {
+    font-size: 8px;
+
+    letter-spacing: 0.08em;
+  }
+
+
+  .service-closing-bottom {
+    font-size: 7px;
+  }
+}
+
+
+/* =========================================
+   ACCESSIBILITY / REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .service-closing-grid,
+  .service-closing-label,
+  .service-closing-pulse::before,
+  .service-closing-pulse::after {
+    animation: none;
+  }
+
+
+  .service-closing-button,
+  .service-closing-button::before,
+  .service-closing-arrow {
+    transition: none;
+  }
+}

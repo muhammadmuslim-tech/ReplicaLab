@@ -1,0 +1,1301 @@
+/* =========================================================
+   REPLICA LAB NAVBAR
+========================================================= */
+
+.navbar-wrapper {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  z-index: 1000;
+
+  padding: 0;
+
+  transition:
+    padding 0.3s ease;
+}
+
+
+/* =========================================================
+   MAIN NAVBAR
+========================================================= */
+
+.navbar {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 86px;
+
+  /*
+    Logo left
+    Navigation right
+  */
+
+  padding-left: 48px;
+  padding-right: 25px;
+
+  box-sizing: border-box;
+
+  display: grid;
+
+  grid-template-columns:
+    auto
+    1fr;
+
+  align-items: center;
+
+  background: #ffffff;
+
+  border: none;
+
+  border-radius: 0;
+
+  box-shadow: none;
+
+  transition:
+    min-height 0.3s ease,
+    padding 0.3s ease,
+    border-radius 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.navbar-logo {
+  justify-self: start;
+
+  display: flex;
+
+  align-items: center;
+
+  flex-shrink: 0;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease;
+}
+
+
+.navbar-logo img {
+  display: block;
+
+  width: 166px;
+
+  height: auto;
+
+  max-width: 100%;
+
+  object-fit: contain;
+
+  transition:
+    width 0.3s ease;
+}
+
+
+.navbar-logo:hover {
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   DESKTOP NAVIGATION
+========================================================= */
+
+.navbar-navigation {
+  /*
+    COMPLETE NAVIGATION
+    RIGHT SIDE
+  */
+
+  justify-self: end;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  gap: 48px;
+
+  margin-right: 25px;
+
+  white-space: nowrap;
+
+  transform: none;
+}
+
+
+/* =========================================================
+   NAVIGATION LINKS
+========================================================= */
+
+.navbar-link {
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 20px 0;
+
+  box-sizing: border-box;
+
+  color: #111111;
+
+  font-size: 17px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  white-space: nowrap;
+
+  text-decoration: none !important;
+
+  border: none;
+
+  outline: none;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+/* =========================================================
+   REMOVE UNDERLINE
+========================================================= */
+
+.navbar-link::before,
+.navbar-link::after {
+  display: none !important;
+
+  content: none !important;
+}
+
+
+/* =========================================================
+   LINK STATES
+========================================================= */
+
+.navbar-link:hover,
+.navbar-link:focus,
+.navbar-link:active,
+.navbar-link:visited {
+  text-decoration: none !important;
+}
+
+
+/* =========================================================
+   LINK HOVER
+========================================================= */
+
+.navbar-link:hover {
+  color: #666666;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   SERVICES WRAPPER
+========================================================= */
+
+.navbar-hover-item {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+}
+
+
+/* =========================================================
+   SERVICES HOVER BRIDGE
+========================================================= */
+
+.services-hover-item::after {
+  content: "";
+
+  position: absolute;
+
+  top: 100%;
+
+  left: -20px;
+
+  width: calc(100% + 40px);
+
+  height: 18px;
+
+  background: transparent;
+
+  pointer-events: auto;
+}
+
+
+/* =========================================================
+   GENERIC POPUP
+========================================================= */
+
+.navbar-popup {
+  position: absolute;
+
+  top: calc(100% + 18px);
+
+  left: 50%;
+
+  width: 380px;
+
+  box-sizing: border-box;
+
+  padding: 0;
+
+  background: #ffffff;
+
+  border:
+    1px solid rgba(0, 0, 0, 0.08);
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.14),
+    0 8px 24px rgba(0, 0, 0, 0.07);
+
+  overflow: hidden;
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  pointer-events: none;
+
+  transform:
+    translate(-50%, -10px)
+    scale(0.97);
+
+  transform-origin: top center;
+
+  transition:
+    opacity 0.2s ease,
+    visibility 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+/* =========================================================
+   SERVICES POPUP
+   MAIN FIX
+========================================================= */
+
+.services-popup {
+  /*
+    IMPORTANT:
+    Fixed positioning keeps the popup
+    inside the screen.
+  */
+
+  position: fixed;
+
+  /*
+    Normal navbar height = 86px
+    Small gap below navbar
+  */
+
+  top: 104px;
+
+  /*
+    Keep popup inside right side
+  */
+
+  right: 25px;
+
+  left: auto;
+
+  /*
+    Compact popup width
+  */
+
+  width: min(
+    980px,
+    calc(100vw - 50px)
+  );
+
+  max-width: 980px;
+
+  padding:
+    34px 36px;
+
+  box-sizing: border-box;
+
+  background: #050505;
+
+  border: none;
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 30px 70px rgba(0, 0, 0, 0.22),
+    0 10px 30px rgba(0, 0, 0, 0.12);
+
+  overflow: hidden;
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  pointer-events: none;
+
+  /*
+    DO NOT use translateX(-50%)
+  */
+
+  transform:
+    translateY(-10px)
+    scale(0.97);
+
+  transform-origin: top right;
+
+  transition:
+    opacity 0.2s ease,
+    visibility 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+/* =========================================================
+   SERVICES POPUP OPEN
+========================================================= */
+
+.services-hover-item.services-popup-open
+.services-popup {
+  opacity: 1;
+
+  visibility: visible;
+
+  pointer-events: auto;
+
+  transform:
+    translateY(0)
+    scale(1);
+}
+
+
+/* =========================================================
+   SERVICES POPUP COLUMNS
+========================================================= */
+
+.services-popup-columns {
+  display: grid;
+
+  grid-template-columns:
+    0.85fr
+    1.10fr
+    1.55fr
+    1.20fr;
+
+  width: 100%;
+
+  min-width: 0;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   SERVICES POPUP COLUMN
+========================================================= */
+
+.services-popup-column {
+  min-width: 0;
+
+  padding:
+    0 22px;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   FIRST COLUMN
+========================================================= */
+
+.services-popup-column:first-child {
+  padding-left: 0;
+}
+
+
+/* =========================================================
+   LAST COLUMN
+========================================================= */
+
+.services-popup-column:last-child {
+  padding-right: 0;
+}
+
+
+/* =========================================================
+   SEPARATORS
+========================================================= */
+
+.services-popup-column:not(:last-child) {
+  border-right:
+    1px solid rgba(255, 255, 255, 0.12);
+}
+
+
+/* =========================================================
+   SERVICES POPUP TITLE
+========================================================= */
+
+.services-popup-title {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 10px;
+
+  margin: 0;
+
+  padding: 0;
+
+  max-width: 100%;
+
+  color: #ffffff;
+
+  font-size: 17px;
+
+  font-weight: 650;
+
+  line-height: 1.25;
+
+  white-space: normal;
+
+  text-decoration: none !important;
+}
+
+
+.services-popup-title:hover,
+.services-popup-title:focus,
+.services-popup-title:active,
+.services-popup-title:visited {
+  color: #ffffff;
+
+  text-decoration: none !important;
+}
+
+
+/* =========================================================
+   SERVICE NUMBER
+========================================================= */
+
+.services-popup-number {
+  display: block;
+
+  color: #777777;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0.12em;
+}
+
+
+/* =========================================================
+   SERVICE LINKS
+========================================================= */
+
+.services-popup-links {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 13px;
+
+  margin-top: 24px;
+
+  min-width: 0;
+}
+
+
+/* =========================================================
+   SERVICE INDIVIDUAL LINKS
+========================================================= */
+
+.services-popup-links a {
+  display: block;
+
+  width: 100%;
+
+  min-width: 0;
+
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+
+  color: #777777;
+
+  font-size: 14px;
+
+  font-weight: 450;
+
+  line-height: 1.35;
+
+  white-space: normal;
+
+  overflow-wrap: break-word;
+
+  word-break: normal;
+
+  text-decoration: none !important;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.services-popup-links a:hover {
+  color: #ffffff;
+
+  transform: translateX(3px);
+
+  text-decoration: none !important;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.navbar-cta {
+  justify-self: end;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-width: 188px;
+
+  height: 52px;
+
+  padding: 0 28px;
+
+  box-sizing: border-box;
+
+  border-radius: 999px;
+
+  background: #111111;
+
+  color: #ffffff;
+
+  font-size: 16px;
+
+  font-weight: 650;
+
+  line-height: 1;
+
+  white-space: nowrap;
+
+  text-decoration: none !important;
+
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+
+.navbar-cta:hover {
+  color: #ffffff;
+
+  background: #292929;
+
+  text-decoration: none !important;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   SCROLLED / FLOATING NAVBAR
+========================================================= */
+
+.navbar-wrapper-scrolled {
+  padding:
+    10px 28px;
+}
+
+
+.navbar-wrapper-scrolled .navbar {
+  min-height: 54px;
+
+  max-width: 1680px;
+
+  margin: 0 auto;
+
+  padding-left: 24px;
+
+  padding-right: 18px;
+
+  border-radius: 999px;
+
+  background:
+    rgba(255, 255, 255, 0.98);
+
+  border:
+    1px solid rgba(0, 0, 0, 0.07);
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.10);
+
+  backdrop-filter: blur(16px);
+
+  -webkit-backdrop-filter: blur(16px);
+}
+
+
+/* =========================================================
+   SCROLLED LOGO
+========================================================= */
+
+.navbar-wrapper-scrolled
+.navbar-logo img {
+  width: 135px;
+}
+
+
+/* =========================================================
+   SCROLLED NAVIGATION
+========================================================= */
+
+.navbar-wrapper-scrolled
+.navbar-navigation {
+  justify-self: end;
+
+  gap: 32px;
+
+  margin-right: 35px;
+
+  transform: none;
+}
+
+
+/* =========================================================
+   SCROLLED LINKS
+========================================================= */
+
+.navbar-wrapper-scrolled
+.navbar-link {
+  padding: 5px 0;
+
+  font-size: 17px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   SCROLLED SERVICES POPUP
+========================================================= */
+
+.navbar-wrapper-scrolled
+.services-popup {
+  /*
+    Floating navbar is 54px high
+    + 18px gap
+  */
+
+  top: 72px;
+
+  right: 18px;
+
+  width: min(
+    980px,
+    calc(100vw - 36px)
+  );
+
+  max-width: 980px;
+
+  padding:
+    32px 34px;
+}
+
+
+/* =========================================================
+   SCROLLED CTA
+========================================================= */
+
+.navbar-wrapper-scrolled
+.navbar-cta {
+  min-width: 140px;
+
+  height: 38px;
+
+  padding:
+    0 22px;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1600px) {
+
+  .navbar {
+    padding-left: 52px;
+
+    padding-right: 25px;
+  }
+
+
+  .navbar-navigation {
+    gap: 42px;
+
+    justify-self: end;
+  }
+
+
+  .navbar-logo img {
+    width: 166px;
+  }
+
+
+  /* -----------------------------------------
+     LARGE DESKTOP POPUP
+  ----------------------------------------- */
+
+  .services-popup {
+    top: 104px;
+
+    right: 28px;
+
+    width: min(
+      1000px,
+      calc(100vw - 56px)
+    );
+
+    max-width: 1000px;
+
+    padding:
+      36px 38px;
+  }
+
+
+  .navbar-wrapper-scrolled
+  .services-popup {
+    top: 72px;
+
+    right: 20px;
+
+    width: min(
+      1000px,
+      calc(100vw - 40px)
+    );
+
+    max-width: 1000px;
+  }
+
+}
+
+
+/* =========================================================
+   MEDIUM DESKTOP
+========================================================= */
+
+@media (max-width: 1300px)
+and (min-width: 1001px) {
+
+  .navbar {
+    padding-left: 28px;
+
+    padding-right: 22px;
+  }
+
+
+  .navbar-logo img {
+    width: 145px;
+  }
+
+
+  .navbar-navigation {
+    gap: 25px;
+
+    justify-self: end;
+  }
+
+
+  .navbar-link {
+    font-size: 17px;
+
+    font-weight: 600;
+  }
+
+
+  .navbar-cta {
+    min-width: 155px;
+
+    height: 48px;
+
+    padding:
+      0 20px;
+
+    font-size: 14px;
+  }
+
+
+  /* =====================================================
+     SERVICES POPUP
+  ===================================================== */
+
+  .services-popup {
+    top: 104px;
+
+    right: 25px;
+
+    width: min(
+      900px,
+      calc(100vw - 50px)
+    );
+
+    max-width: 900px;
+
+    padding:
+      30px 28px;
+  }
+
+
+  .services-popup-columns {
+    grid-template-columns:
+      0.85fr
+      1.10fr
+      1.50fr
+      1.15fr;
+  }
+
+
+  .services-popup-column {
+    padding:
+      0 18px;
+  }
+
+
+  .services-popup-title {
+    font-size: 16px;
+  }
+
+
+  .services-popup-links {
+    gap: 12px;
+
+    margin-top: 22px;
+  }
+
+
+  .services-popup-links a {
+    font-size: 13px;
+  }
+
+
+  /* =====================================================
+     SCROLLED POPUP
+  ===================================================== */
+
+  .navbar-wrapper-scrolled
+  .services-popup {
+    top: 72px;
+
+    right: 14px;
+
+    width: min(
+      900px,
+      calc(100vw - 28px)
+    );
+
+    max-width: 900px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.mobile-menu-button {
+  display: none;
+
+  width: 44px;
+
+  height: 44px;
+
+  margin-left: auto;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #111111;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-direction: column;
+
+  gap: 5px;
+
+  cursor: pointer;
+}
+
+
+.mobile-menu-button span {
+  display: block;
+
+  width: 18px;
+
+  height: 1.5px;
+
+  background: #ffffff;
+
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+
+/* =========================================================
+   MOBILE BUTTON ACTIVE
+========================================================= */
+
+.mobile-menu-button-active
+span:nth-child(1) {
+  transform:
+    translateY(6.5px)
+    rotate(45deg);
+}
+
+
+.mobile-menu-button-active
+span:nth-child(2) {
+  opacity: 0;
+}
+
+
+.mobile-menu-button-active
+span:nth-child(3) {
+  transform:
+    translateY(-6.5px)
+    rotate(-45deg);
+}
+
+
+/* =========================================================
+   MOBILE NAVIGATION
+========================================================= */
+
+.mobile-navigation {
+  display: none;
+}
+
+
+/* =========================================================
+   TABLET / MOBILE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  /* =====================================================
+     HIDE DESKTOP NAVIGATION
+  ===================================================== */
+
+  .navbar-navigation,
+  .navbar-cta {
+    display: none;
+  }
+
+
+  /* =====================================================
+     NAVBAR
+  ===================================================== */
+
+  .navbar {
+    display: flex;
+
+    min-height: 72px;
+
+    padding:
+      0 22px;
+  }
+
+
+  /* =====================================================
+     MOBILE BUTTON
+  ===================================================== */
+
+  .mobile-menu-button {
+    display: flex;
+  }
+
+
+  /* =====================================================
+     DISABLE DESKTOP POPUP
+  ===================================================== */
+
+  .navbar-popup {
+    display: none !important;
+  }
+
+
+  /* =====================================================
+     MOBILE MENU
+  ===================================================== */
+
+  .mobile-navigation {
+    position: absolute;
+
+    top: calc(100% + 12px);
+
+    left: 0;
+
+    width: 100%;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+    background: #ffffff;
+
+    border:
+      1px solid rgba(0, 0, 0, 0.08);
+
+    border-radius: 20px;
+
+    box-shadow:
+      0 20px 50px rgba(0, 0, 0, 0.12);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transform:
+      translateY(-8px);
+
+    transition:
+      opacity 0.25s ease,
+      visibility 0.25s ease,
+      transform 0.25s ease;
+  }
+
+
+  /* =====================================================
+     MOBILE MENU OPEN
+  ===================================================== */
+
+  .mobile-navigation-open {
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+    transform:
+      translateY(0);
+  }
+
+
+  /* =====================================================
+     MOBILE LINKS
+  ===================================================== */
+
+  .mobile-navigation a {
+    display: block;
+
+    padding:
+      14px 12px;
+
+    color: #111111;
+
+    font-size: 16px;
+
+    font-weight: 500;
+
+    line-height: 1.2;
+
+    text-decoration: none !important;
+
+    border-radius: 10px;
+
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
+  }
+
+
+  .mobile-navigation a:hover {
+    color: #111111;
+
+    background: #f1f1f1;
+  }
+
+
+  /* =====================================================
+     MOBILE CTA
+  ===================================================== */
+
+  .mobile-navigation
+  .mobile-navigation-cta {
+    margin-top: 10px;
+
+    text-align: center;
+
+    background: #111111;
+
+    color: #ffffff;
+
+    border-radius: 999px;
+  }
+
+
+  .mobile-navigation
+  .mobile-navigation-cta:hover {
+    background: #292929;
+
+    color: #ffffff;
+  }
+
+
+  /* =====================================================
+     SCROLLED MOBILE
+  ===================================================== */
+
+  .navbar-wrapper-scrolled {
+    padding:
+      8px 14px;
+  }
+
+
+  .navbar-wrapper-scrolled .navbar {
+    min-height: 52px;
+
+    padding:
+      0 17px;
+
+    border-radius: 999px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .navbar {
+    min-height: 68px;
+
+    padding:
+      0 18px;
+  }
+
+
+  .navbar-logo img {
+    width: 140px;
+  }
+
+
+  .mobile-menu-button {
+    width: 42px;
+
+    height: 42px;
+  }
+
+
+  .navbar-wrapper-scrolled {
+    padding:
+      7px 12px;
+  }
+
+
+  .navbar-wrapper-scrolled .navbar {
+    min-height: 50px;
+
+    padding:
+      0 15px;
+  }
+
+
+  .navbar-wrapper-scrolled
+  .navbar-logo img {
+    width: 130px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .navbar {
+    min-height: 64px;
+
+    padding:
+      0 14px;
+  }
+
+
+  .navbar-logo img {
+    width: 125px;
+  }
+
+
+  .mobile-menu-button {
+    width: 40px;
+
+    height: 40px;
+  }
+
+
+  .navbar-wrapper-scrolled
+  .navbar-logo img {
+    width: 115px;
+  }
+
+}

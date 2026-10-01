@@ -1,0 +1,225 @@
+.audit-process {
+  padding: 95px 6vw;
+
+  background: #ffffff;
+  color: #111111;
+}
+
+.audit-process-container {
+  max-width: 1450px;
+
+  margin: 0 auto;
+}
+
+.audit-process-header {
+  margin-bottom: 50px;
+}
+
+.audit-process-header > span {
+  display: block;
+
+  margin-bottom: 15px;
+
+  color: #999999;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 0.2em;
+}
+
+.audit-process-header h2 {
+  margin: 0;
+
+  font-size: clamp(50px, 5vw, 74px);
+  font-weight: 800;
+
+  line-height: 0.95;
+
+  letter-spacing: -0.06em;
+}
+
+.audit-process-header h2 span {
+  color: #929292;
+}
+
+
+/* PROCESS */
+
+.audit-process-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  border-top: 1px solid #d5d5d2;
+  border-bottom: 1px solid #d5d5d2;
+}
+
+.audit-process-item {
+  min-height: 230px;
+
+  padding: 34px;
+
+  display: grid;
+
+  grid-template-columns:
+    45px 1fr;
+
+  gap: 25px;
+
+  box-sizing: border-box;
+}
+
+.audit-process-item +
+.audit-process-item {
+  border-left: 1px solid #d5d5d2;
+}
+
+.audit-process-number {
+  color: #999999;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+}
+
+.audit-process-item h3 {
+  margin: 0;
+
+  font-size: 30px;
+  font-weight: 700;
+
+  letter-spacing: -0.04em;
+}
+
+.audit-process-item p {
+  max-width: 310px;
+
+  margin: 16px 0 0;
+
+  color: #707070;
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+
+/* CONFIDENTIALITY */
+
+.audit-confidentiality {
+  margin-top: 70px;
+  padding-top: 40px;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 80px;
+
+  align-items: end;
+
+  border-top: 1px solid #111111;
+}
+
+.audit-confidentiality > div > span {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: #999999;
+
+  font-size: 7px;
+  font-weight: 700;
+
+  letter-spacing: 0.17em;
+}
+
+.audit-confidentiality h3 {
+  max-width: 600px;
+
+  margin: 0;
+
+  font-size: clamp(37px, 4vw, 55px);
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing: -0.05em;
+}
+
+.audit-confidentiality h3 span {
+  color: #999999;
+}
+
+.audit-confidentiality > p {
+  max-width: 560px;
+
+  margin: 0;
+
+  color: #666666;
+
+  font-size: 12px;
+
+  line-height: 1.75;
+}
+
+@media (max-width: 800px) {
+  .audit-process {
+    padding: 70px 35px;
+  }
+
+  .audit-process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .audit-process-item {
+    min-height: 180px;
+  }
+
+  .audit-process-item +
+  .audit-process-item {
+    border-left: 0;
+    border-top: 1px solid #d5d5d2;
+  }
+
+  .audit-confidentiality {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+}
+
+@media (max-width: 650px) {
+  .audit-process {
+    padding: 60px 22px;
+  }
+
+  .audit-process-header h2 {
+    font-size: 47px;
+  }
+
+  .audit-process-item {
+    min-height: auto;
+
+    padding: 28px 5px;
+
+    grid-template-columns:
+      35px 1fr;
+  }
+
+  .audit-process-item h3 {
+    font-size: 27px;
+  }
+
+  .audit-confidentiality {
+    margin-top: 50px;
+  }
+
+  .audit-confidentiality h3 {
+    font-size: 40px;
+  }
+}

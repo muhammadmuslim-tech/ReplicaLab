@@ -1,0 +1,113 @@
+.technology-item {
+  min-height: 285px;
+  background: white;
+  border: 1px solid #ddd;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.technology-item::before {
+  content: "";
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: rgba(13, 11, 97, 0.04);
+  top: -70px;
+  right: -70px;
+  transition: 0.4s ease;
+}
+
+.technology-item:hover {
+  transform: translateY(-7px);
+  border-color: #111;
+  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.09);
+}
+
+.technology-item:hover::before {
+  transform: scale(2);
+}
+
+.technology-item-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.technology-logo {
+  width: 58px;
+  height: 58px;
+  border: 1px solid #e0e0e0;
+  display: grid;
+  place-items: center;
+  background: #fafafa;
+  flex-shrink: 0;
+  transition: 0.3s ease;
+}
+
+.technology-logo img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.technology-logo span {
+  font-size: 21px;
+  font-weight: 900;
+}
+
+.technology-item:hover .technology-logo {
+  transform: scale(1.08);
+  background: white;
+}
+
+.technology-item-content {
+  margin-top: 25px;
+}
+
+.technology-item-content h3 {
+  margin: 0;
+  font-size: 21px;
+  letter-spacing: -0.5px;
+}
+
+.technology-item-content p {
+  color: #777;
+  line-height: 1.65;
+  font-size: 13px;
+  margin: 10px 0 0;
+}
+
+.technology-item-bottom {
+  margin-top: auto;
+  padding-top: 25px;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.technology-item-bottom span:first-child {
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  color: #888;
+  font-weight: 800;
+}
+
+.technology-arrow {
+  font-size: 20px;
+  transition: 0.3s ease;
+}
+
+.technology-item:hover .technology-arrow {
+  transform: translate(4px, -4px);
+}

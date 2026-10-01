@@ -1,0 +1,829 @@
+/* =========================================================
+   REPLICA LAB
+   HOME HERO SECTION
+========================================================= */
+
+.hero-section {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 150px 40px 90px;
+
+  background: #ffffff;
+
+  overflow: hidden;
+
+  isolation: isolate;
+}
+
+
+/* =========================================================
+   ANIMATED GRID BACKGROUND
+========================================================= */
+
+.hero-grid {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 0;
+
+  pointer-events: none;
+
+  overflow: hidden;
+
+  opacity: 0.72;
+}
+
+
+/* =========================================================
+   MAIN GRID
+========================================================= */
+
+.hero-grid-lines {
+  position: absolute;
+
+  width: 120%;
+  height: 120%;
+
+  left: -10%;
+  top: -10%;
+
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(167, 165, 165, 0.884) 1px,
+      transparent 3px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(167, 165, 165, 0.884) 1px,
+      transparent 3px
+    );
+
+  background-size:
+    72px 72px;
+
+  animation:
+    heroGridMove 18s linear infinite;
+
+  transform: translate3d(0, 0, 0);
+}
+
+
+/* =========================================================
+   SECONDARY GRID
+========================================================= */
+
+.hero-grid-lines-secondary {
+  width: 120%;
+  height: 120%;
+
+  left: -10%;
+  top: -10%;
+
+  opacity: 0.35;
+
+  background-size:
+    144px 144px;
+
+  animation:
+    heroGridMoveReverse 30s linear infinite;
+}
+
+
+/* =========================================================
+   GRID MOTION
+========================================================= */
+
+@keyframes heroGridMove {
+
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(-36px, -36px, 0);
+  }
+
+  100% {
+    transform: translate3d(-72px, -72px, 0);
+  }
+
+}
+
+
+@keyframes heroGridMoveReverse {
+
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(36px, 36px, 0);
+  }
+
+  100% {
+    transform: translate3d(72px, 72px, 0);
+  }
+
+}
+
+
+/* =========================================================
+   SCAN LINE
+========================================================= */
+
+.hero-grid-scan {
+  position: absolute;
+
+  left: 0;
+  top: -10%;
+
+  width: 100%;
+  height: 1px;
+
+  background: rgba(20, 20, 20, 0.13);
+
+  box-shadow:
+    0 0 18px rgba(20, 20, 20, 0.08);
+
+  animation:
+    heroGridScan 8s ease-in-out infinite;
+
+  opacity: 0;
+}
+
+
+@keyframes heroGridScan {
+
+  0% {
+    top: -10%;
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0.35;
+  }
+
+  50% {
+    opacity: 0.7;
+  }
+
+  90% {
+    opacity: 0.25;
+  }
+
+  100% {
+    top: 110%;
+    opacity: 0;
+  }
+
+}
+
+
+/* =========================================================
+   GRID DATA POINTS
+========================================================= */
+
+.hero-grid-point {
+  position: absolute;
+
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #222222;
+
+  opacity: 0;
+
+  box-shadow:
+    0 0 0 3px rgba(20, 20, 20, 0.045);
+
+  animation:
+    heroGridPoint 5s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   INDIVIDUAL POINT POSITIONS
+========================================================= */
+
+.hero-grid-point-1 {
+  left: 18%;
+  top: 28%;
+
+  animation-delay: 0s;
+}
+
+
+.hero-grid-point-2 {
+  left: 31%;
+  top: 64%;
+
+  animation-delay: 1.3s;
+}
+
+
+.hero-grid-point-3 {
+  left: 49%;
+  top: 22%;
+
+  animation-delay: 2.2s;
+}
+
+
+.hero-grid-point-4 {
+  left: 68%;
+  top: 38%;
+
+  animation-delay: 0.8s;
+}
+
+
+.hero-grid-point-5 {
+  left: 79%;
+  top: 67%;
+
+  animation-delay: 3.1s;
+}
+
+
+.hero-grid-point-6 {
+  left: 88%;
+  top: 27%;
+
+  animation-delay: 1.8s;
+}
+
+
+/* =========================================================
+   DATA POINT ANIMATION
+========================================================= */
+
+@keyframes heroGridPoint {
+
+  0% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+
+  20% {
+    opacity: 0.65;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.15;
+    transform: scale(1.35);
+  }
+
+  75% {
+    opacity: 0.55;
+    transform: scale(0.9);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.hero-eyebrow {
+  display: inline-block;
+
+  margin-bottom: 26px;
+
+  color: #6d6d6d;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing: 0.22em;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   MAIN HEADING
+========================================================= */
+
+.hero-title {
+  width: 100%;
+  max-width: 1050px;
+
+  margin: 0;
+
+  padding: 0;
+
+  color: #111111;
+
+  font-size: clamp(
+    40px,
+    7vw,
+    90px
+  );
+
+  font-weight: 700;
+
+  line-height: 0.99;
+
+  letter-spacing: -0.055em;
+
+  text-align: center;
+
+  text-wrap: balance;
+}
+
+
+/*
+   Highlighted word
+*/
+
+.hero-title span {
+  color: #707070;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.hero-description {
+  width: 100%;
+  max-width: 720px;
+
+  margin: 34px auto 0;
+
+  padding: 0;
+
+  color: #666666;
+
+  font-size: clamp(
+    16px,
+    1.35vw,
+    19px
+  );
+
+  font-weight: 400;
+
+  line-height: 1.65;
+
+  letter-spacing: -0.01em;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   BUTTON AREA
+========================================================= */
+
+.hero-actions {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 14px;
+
+  margin-top: 38px;
+
+  flex-wrap: wrap;
+}
+
+
+/* =========================================================
+   COMMON BUTTON
+========================================================= */
+
+.hero-button {
+  min-height: 54px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 16px;
+
+  padding: 0 24px;
+
+  box-sizing: border-box;
+
+  border-radius: 999px;
+
+  font-size: 14px;
+
+  /* font-weight: 600; */
+
+  line-height: 1;
+
+  white-space: nowrap;
+
+  text-decoration: none !important;
+
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+========================================================= */
+
+.hero-button-primary {
+  min-width: 235px;
+
+  background: #111111;
+
+  border: 1px solid #111111;
+
+  color: #ffffff;
+}
+
+
+.hero-button-primary:hover {
+  background: #2b2b2b;
+
+  border-color: #2b2b2b;
+
+  color: #ffffff;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   SECONDARY BUTTON
+========================================================= */
+
+.hero-button-secondary {
+  min-width: 185px;
+
+  background: #ffffff;
+
+  border: 1px solid #d6d6d6;
+
+  color: #111111;
+}
+
+
+.hero-button-secondary:hover {
+  background: #f3f3f3;
+
+  border-color: #bdbdbd;
+
+  color: #111111;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   BUTTON ARROW
+========================================================= */
+
+.hero-button-arrow {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 17px;
+
+  line-height: 1;
+
+  transition:
+    transform 0.25s ease;
+}
+
+
+.hero-button:hover .hero-button-arrow {
+  transform: translate(2px, -2px);
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1600px) {
+
+  .hero-section {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .hero-content {
+    max-width: 1250px;
+  }
+
+  .hero-title {
+    max-width: 1200px;
+  }
+
+  .hero-grid-lines {
+    background-size: 82px 82px;
+  }
+
+  .hero-grid-lines-secondary {
+    background-size: 164px 164px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .hero-section {
+    min-height: 100svh;
+
+    padding:
+      135px
+      30px
+      80px;
+  }
+
+
+  .hero-content {
+    max-width: 850px;
+  }
+
+
+  .hero-title {
+    max-width: 800px;
+
+    font-size: clamp(
+      50px,
+      8vw,
+      78px
+    );
+  }
+
+
+  .hero-description {
+    max-width: 650px;
+
+    font-size: 17px;
+  }
+
+
+  .hero-grid-lines {
+    background-size: 62px 62px;
+  }
+
+
+  .hero-grid-lines-secondary {
+    background-size: 124px 124px;
+  }
+
+
+  .hero-grid-point {
+    width: 4px;
+    height: 4px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .hero-section {
+    min-height: 100svh;
+
+    padding:
+      120px
+      20px
+      60px;
+  }
+
+
+  .hero-eyebrow {
+    margin-bottom: 20px;
+
+    font-size: 10px;
+
+    letter-spacing: 0.18em;
+  }
+
+
+  .hero-title {
+    max-width: 520px;
+
+    font-size: clamp(
+      42px,
+      12vw,
+      62px
+    );
+
+    line-height: 1.01;
+
+    letter-spacing: -0.05em;
+  }
+
+
+  .hero-description {
+    max-width: 500px;
+
+    margin-top: 25px;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+  }
+
+
+  .hero-actions {
+    width: 100%;
+
+    margin-top: 30px;
+
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+
+  .hero-button {
+    width: min(
+      100%,
+      320px
+    );
+
+    min-height: 52px;
+  }
+
+
+  /* Simplified mobile grid */
+
+  .hero-grid {
+    opacity: 0.55;
+  }
+
+
+  .hero-grid-lines {
+    width: 150%;
+    height: 150%;
+
+    left: -25%;
+    top: -25%;
+
+    background-size: 55px 55px;
+
+    animation-duration: 24s;
+  }
+
+
+  .hero-grid-lines-secondary {
+    background-size: 110px 110px;
+
+    animation-duration: 38s;
+  }
+
+
+  .hero-grid-point {
+    width: 3px;
+    height: 3px;
+  }
+
+
+  .hero-grid-point-2,
+  .hero-grid-point-5,
+  .hero-grid-point-6 {
+    display: none;
+  }
+
+
+  .hero-grid-scan {
+    animation-duration: 11s;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .hero-section {
+    padding:
+      110px
+      16px
+      50px;
+  }
+
+
+  .hero-title {
+    font-size: 40px;
+  }
+
+
+  .hero-description {
+    font-size: 14px;
+  }
+
+
+  .hero-button {
+    width: 100%;
+  }
+
+
+  .hero-grid-lines {
+    background-size: 48px 48px;
+  }
+
+
+  .hero-grid-lines-secondary {
+    background-size: 96px 96px;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   Accessibility / Performance
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .hero-grid-lines,
+  .hero-grid-lines-secondary,
+  .hero-grid-scan,
+  .hero-grid-point {
+    animation: none;
+  }
+
+
+  .hero-grid-scan {
+    display: none;
+  }
+
+
+  .hero-grid-point {
+    opacity: 0.25;
+  }
+
+
+  .hero-button,
+  .hero-button-arrow {
+    transition: none;
+  }
+
+}

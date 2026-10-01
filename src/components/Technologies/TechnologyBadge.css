@@ -1,0 +1,33 @@
+.technology-badges {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+  text-align: right;
+}
+
+.technology-category-badge,
+.technology-type-badge {
+  display: inline-block;
+  max-width: 160px;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.technology-category-badge {
+  background: #111;
+  color: white;
+  padding: 6px 8px;
+}
+
+.technology-type-badge {
+  color: #888;
+}
+
+@media (max-width: 500px) {
+  .technology-badges {
+    max-width: 145px;
+  }
+}

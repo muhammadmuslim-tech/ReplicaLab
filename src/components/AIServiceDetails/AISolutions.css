@@ -1,0 +1,1151 @@
+/* =========================================================
+   AI SOLUTIONS DETAIL PAGE
+========================================================= */
+
+.ai-detail-page {
+    --ai-black: #111111;
+    --ai-dark: #151515;
+    --ai-white: #ffffff;
+    --ai-light: #f4f4f2;
+    --ai-border: #d8d8d4;
+    --ai-muted: #777773;
+    --ai-soft: #999995;
+
+    width: 100%;
+    overflow: hidden;
+
+    background: var(--ai-white);
+    color: var(--ai-black);
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.ai-detail-container {
+    width: min(1320px, calc(100% - 96px));
+    margin: 0 auto;
+    height: screen;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.ai-solutions-hero {
+    position: relative;
+
+    min-height: 630px;
+
+    padding: 150px 0 55px;
+
+    background: var(--ai-white);
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   HERO STRUCTURAL LINES
+========================================================= */
+
+.ai-hero-structure {
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+}
+
+.ai-hero-structure span {
+    position: absolute;
+
+    display: block;
+
+    background: #e8e8e5;
+}
+
+.ai-hero-structure span:nth-child(1) {
+    top: 0;
+    bottom: 0;
+    left: 18%;
+    width: 1px;
+}
+
+.ai-hero-structure span:nth-child(2) {
+    top: 0;
+    bottom: 0;
+    left: 68%;
+    width: 1px;
+}
+
+.ai-hero-structure span:nth-child(3) {
+    top: 31%;
+    left: 0;
+    right: 0;
+    height: 1px;
+}
+
+.ai-hero-structure span:nth-child(4) {
+    top: 72%;
+    left: 0;
+    right: 0;
+    height: 1px;
+}
+
+
+/* =========================================================
+   HERO TOPLINE
+========================================================= */
+
+.ai-hero-topline {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid var(--ai-border);
+}
+
+.ai-hero-id {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 0.18em;
+}
+
+.ai-hero-dot {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: var(--ai-black);
+}
+
+.ai-hero-index {
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+
+    color: var(--ai-soft);
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.ai-hero-content {
+    position: relative;
+
+    /* padding-top: 72px; */
+}
+
+.ai-hero-label {
+    margin-bottom: 28px;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 0.2em;
+
+    color: #8c8c87;
+}
+
+.ai-hero-content h1 {
+    margin: 0;
+
+    font-size: clamp(95px, 13vw, 190px);
+
+    line-height: 0.82;
+
+    font-weight: 600;
+
+    letter-spacing: -0.075em;
+}
+
+.ai-hero-content h1 span {
+    display: block;
+
+    margin-left: 10.5vw;
+
+    /* color: #8b8b87; */
+    background-image: linear-gradient(105deg, black, #8b8b87 40%, black, black);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* =========================================================
+   HERO DESCRIPTION
+========================================================= */
+
+.ai-hero-description {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 18px;
+
+    max-width: 520px;
+
+    margin: 30px 0 0 auto;
+}
+
+.ai-hero-line {
+    flex: 0 0 30px;
+
+    width: 30px;
+    height: 2px;
+
+    margin-top: 14px;
+
+    background: var(--ai-black);
+}
+
+.ai-hero-description p {
+    margin: 0;
+
+    font-size: 16px;
+
+    line-height: 1.75;
+
+    color: #666663;
+}
+
+
+/* =========================================================
+   HERO BOTTOM
+========================================================= */
+
+.ai-hero-bottom {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 55px;
+
+    width: min(1320px, calc(100% - 96px));
+
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 8px;
+    font-weight: 800;
+
+    letter-spacing: 0.18em;
+
+    color: #999995;
+}
+
+
+/* =========================================================
+   SECTION MARKER
+========================================================= */
+
+.ai-section-marker {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 32px;
+}
+
+.ai-section-marker span {
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+
+    color: #777773;
+}
+
+.ai-section-marker i {
+    width: 24px;
+    height: 1px;
+
+    background: #111111;
+}
+
+.ai-section-marker small {
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.18em;
+
+    color: #8d8d88;
+}
+
+
+/* =========================================================
+   OVERVIEW
+========================================================= */
+
+.ai-overview-section {
+    padding: 80px 0 60px;
+
+    background: var(--ai-light);
+}
+
+
+/*
+   IMPORTANT:
+   Heading is now ABOVE paragraph.
+*/
+
+.ai-overview-layout {
+    display: block;
+}
+
+
+/* =========================================================
+   OVERVIEW HEADING
+========================================================= */
+
+.ai-overview-heading {
+    max-width: 950px;
+}
+
+.ai-overview-heading>span {
+    display: block;
+
+    margin-bottom: 20px;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 0.2em;
+
+    color: #858580;
+}
+
+.ai-overview-heading h2 {
+    margin: 0;
+
+    font-size: clamp(52px, 7vw, 92px);
+
+    line-height: 0.94;
+
+    font-weight: 600;
+
+    letter-spacing: -0.065em;
+
+
+}
+
+/* .ai-overview-heading h2 br{
+    background-image: linear-gradient(120deg, black,#8b8b87,#8b8b87 );
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+} */
+.ai-overview-heading h2 span {
+    background-image: linear-gradient(105deg, black, #8b8b87, #8b8b87);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* color: white; */
+}
+
+/* =========================================================
+   OVERVIEW CONTENT
+========================================================= */
+
+.ai-overview-content {
+    width: min(880px, 100%);
+
+    margin-left: auto;
+
+    margin-top: 40px;
+}
+
+.ai-overview-lead {
+    margin: 0;
+
+    font-size: 18px;
+
+    line-height: 1.85;
+
+    color: #555552;
+}
+
+
+/* =========================================================
+   SYSTEM ARCHITECTURE
+========================================================= */
+
+.ai-overview-system {
+    margin-top: 75px;
+
+    border-top: 1px solid #cfcfcb;
+}
+
+.ai-system-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 25px 0;
+
+    border-bottom: 1px solid #d5d5d1;
+}
+
+.ai-system-header span {
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.18em;
+
+    color: #858580;
+}
+
+.ai-system-row {
+    display: grid;
+
+    grid-template-columns: 200px 1fr;
+
+    align-items: center;
+
+    min-height: 84px;
+
+    border-bottom: 1px solid #d5d5d1;
+}
+
+.ai-system-row span {
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.16em;
+
+    color: #898985;
+}
+
+.ai-system-row strong {
+    font-size: 18px;
+
+    font-weight: 600;
+
+    letter-spacing: -0.025em;
+}
+
+
+/* =========================================================
+   BUSINESS IMPACT
+   background-image: linear-gradient(105deg, black,#8b8b87,#8b8b87 );
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+========================================================= */
+
+.ai-impact-section {
+    padding: 80px 0 80px;
+
+    background: var(--ai-white);
+}
+
+.ai-section-heading {
+    margin-bottom: 65px;
+}
+
+.ai-section-heading h2 {
+    max-width: 900px;
+
+    margin: 0;
+
+    font-size: clamp(48px, 6vw, 78px);
+
+    line-height: 0.96;
+
+    font-weight: 600;
+
+    letter-spacing: -0.06em;
+
+}
+
+
+/* =========================================================
+   BUSINESS IMPACT — BLACK HOVER
+========================================================= */
+
+.ai-impact-item {
+  display: grid;
+  grid-template-columns: 90px 1fr 50px;
+  gap: 30px;
+  align-items: center;
+
+  padding: 34px 20px;
+
+  border-bottom: 1px solid #d6d6d2;
+    /* background: #000; */
+  background: transparent;
+
+  transition:
+    background-color 0.35s ease,
+    color 0.35s ease,
+    padding 0.35s ease;
+}
+
+.ai-impact-item:hover {
+  background: #111111;
+
+  color: #ffffff;
+
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+
+/* Number */
+
+.ai-impact-index {
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+
+  color: #999995;
+
+  transition: color 0.35s ease;
+}
+
+.ai-impact-item:hover .ai-impact-index {
+  color: white;
+}
+
+
+/* Heading */
+
+.ai-impact-main h3 {
+  margin: 0;
+
+  font-size: 24px;
+  line-height: 1.1;
+
+  font-weight: 600;
+  letter-spacing: -0.035em;
+
+  color: #111111;
+
+  transition: color 0.35s ease;
+}
+
+.ai-impact-item:hover .ai-impact-main h3 {
+  color: #ffffff;
+}
+
+
+/* Description */
+
+.ai-impact-main p {
+  max-width: 700px;
+
+  margin: 10px 0 0;
+
+  font-size: 13px;
+  line-height: 1.7;
+
+  color: #72726e;
+
+  transition: color 0.35s ease;
+}
+
+.ai-impact-item:hover .ai-impact-main p {
+  color: #b7b7b7;
+}
+
+
+/* Arrow */
+
+.ai-impact-symbol {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 38px;
+  height: 38px;
+
+  border: 1px solid #d8d8d4;
+  border-radius: 50%;
+
+  font-size: 15px;
+
+  color: #111111;
+
+  transition:
+    background-color 0.35s ease,
+    color 0.35s ease,
+    border-color 0.35s ease,
+    transform 0.35s ease;
+}
+
+.ai-impact-item:hover .ai-impact-symbol {
+  background: #ffffff;
+
+  border-color: #ffffff;
+
+  color: #111111;
+
+  transform: translate(2px, -2px);
+}
+
+
+/* =========================================================
+   ENGINEERING OUTPUT — BLACK HOVER
+========================================================= */
+ .ai-deliverables-section {
+    padding: 5px 0 80px;
+  }
+
+.ai-deliverable {
+  display: grid;
+  grid-template-columns: 90px 1fr 1.1fr 50px;
+
+  gap: 30px;
+  align-items: center;
+
+  min-height: 120px;
+
+  padding: 0 20px;
+
+  border-bottom: 1px solid #cecec9;
+    /* background: #000; */
+  background: transparent;
+
+  transition:
+    background-color 0.35s ease,
+    color 0.35s ease,
+    padding 0.35s ease;
+}
+
+.ai-deliverable:hover {
+  background: #111111;
+
+  color: #ffffff;
+
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+
+/* Number */
+
+.ai-deliverable-number {
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+
+  color: #999995;
+
+  transition: color 0.35s ease;
+}
+
+.ai-deliverable:hover .ai-deliverable-number {
+  color: white;
+}
+
+
+/* Title */
+
+.ai-deliverable-title h3 {
+  margin: 0;
+
+  font-size: 20px;
+
+  line-height: 1.15;
+
+  font-weight: 600;
+
+  letter-spacing: -0.025em;
+
+  color: #111111;
+
+  transition: color 0.35s ease;
+}
+
+.ai-deliverable:hover .ai-deliverable-title h3 {
+  color: #ffffff;
+}
+
+
+/* Description */
+
+.ai-deliverable-description p {
+  margin: 0;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+
+  color: #71716d;
+
+  transition: color 0.35s ease;
+}
+
+.ai-deliverable:hover .ai-deliverable-description p {
+  color: #b7b7b7;
+}
+
+
+/* Arrow */
+
+.ai-deliverable-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 38px;
+  height: 38px;
+
+  border: 1px solid #d4d4d0;
+
+  border-radius: 50%;
+
+  font-size: 15px;
+
+  color: #111111;
+
+  transition:
+    background-color 0.35s ease,
+    color 0.35s ease,
+    border-color 0.35s ease,
+    transform 0.35s ease;
+}
+
+.ai-deliverable:hover .ai-deliverable-arrow {
+  background: #ffffff;
+
+  border-color: #ffffff;
+
+  color: #111111;
+
+  transform: translate(2px, -2px);
+}
+
+/* =========================================================
+   CLOSING
+========================================================= */
+
+.ai-closing-section {
+    padding: 110px 0 120px;
+
+    background: var(--ai-dark);
+
+    color: #ffffff;
+}
+
+.ai-closing-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid #343434;
+}
+
+.ai-closing-top span {
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.18em;
+
+    color: #858585;
+}
+
+.ai-closing-content {
+    padding-top: 75px;
+}
+
+.ai-closing-label {
+    margin-bottom: 25px;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.2em;
+
+    color: #8d8d8d;
+}
+
+.ai-closing-content h2 {
+    margin: 0;
+
+    font-size: clamp(52px, 7vw, 95px);
+
+    line-height: 0.94;
+
+    font-weight: 500;
+
+    letter-spacing: -0.065em;
+}
+
+.ai-closing-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 75px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #343434;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.17em;
+
+    color: #777777;
+}
+
+.ai-closing-status {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+}
+
+.ai-closing-status i {
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .ai-detail-container {
+        width: min(100% - 56px, 850px);
+    }
+
+    .ai-hero-bottom {
+        width: min(100% - 56px, 850px);
+    }
+
+    .ai-solutions-hero {
+        min-height: 700px;
+    }
+
+    .ai-hero-content h1 {
+        font-size: clamp(80px, 13vw, 140px);
+    }
+
+    .ai-overview-content {
+        width: 100%;
+        margin-top: 55px;
+    }
+
+    .ai-system-row {
+        grid-template-columns: 150px 1fr;
+    }
+
+    .ai-deliverable {
+        grid-template-columns: 65px 1fr;
+        gap: 20px;
+
+        padding: 30px 0;
+    }
+
+    .ai-deliverable-description {
+        grid-column: 2;
+    }
+
+    .ai-deliverable-arrow {
+        grid-column: 2;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .ai-detail-container {
+        width: calc(100% - 32px);
+    }
+
+    .ai-solutions-hero {
+        min-height: 650px;
+
+        padding: 120px 0 45px;
+    }
+
+    .ai-hero-structure span:nth-child(1) {
+        left: 15%;
+    }
+
+    .ai-hero-structure span:nth-child(2) {
+        left: 82%;
+    }
+
+    .ai-hero-structure span:nth-child(3) {
+        top: 35%;
+    }
+
+    .ai-hero-structure span:nth-child(4) {
+        top: 78%;
+    }
+
+    .ai-hero-content {
+        padding-top: 55px;
+    }
+
+    .ai-hero-label {
+        margin-bottom: 22px;
+    }
+
+    .ai-hero-content h1 {
+        font-size: clamp(65px, 18vw, 100px);
+    }
+
+    .ai-hero-content h1 span {
+        margin-left: 8vw;
+    }
+
+    .ai-hero-description {
+        gap: 12px;
+
+        margin-top: 45px;
+    }
+
+    .ai-hero-description p {
+        font-size: 13px;
+
+        line-height: 1.7;
+    }
+
+    .ai-hero-line {
+        flex-basis: 20px;
+        width: 20px;
+    }
+
+    .ai-hero-bottom {
+        width: calc(100% - 32px);
+
+        bottom: 35px;
+    }
+
+    .ai-hero-bottom span:last-child {
+        display: none;
+    }
+
+
+    /* =====================================================
+     OVERVIEW
+  ===================================================== */
+
+    .ai-overview-section {
+        padding: 85px 0 95px;
+    }
+
+    .ai-section-marker {
+        margin-bottom: 25px;
+    }
+
+    .ai-overview-heading>span {
+        margin-bottom: 16px;
+    }
+
+    .ai-overview-heading h2 {
+        font-size: clamp(43px, 12vw, 62px);
+    }
+
+    .ai-overview-content {
+        margin-top: 40px;
+    }
+
+    .ai-overview-lead {
+        font-size: 15px;
+
+        line-height: 1.8;
+    }
+
+    .ai-overview-system {
+        margin-top: 50px;
+    }
+
+    .ai-system-header {
+        padding: 20px 0;
+    }
+
+    .ai-system-row {
+        grid-template-columns: 90px 1fr;
+
+        min-height: 70px;
+
+        gap: 15px;
+    }
+
+    .ai-system-row strong {
+        font-size: 14px;
+    }
+
+
+    /* =====================================================
+     BUSINESS IMPACT
+  ===================================================== */
+
+    .ai-impact-section {
+        padding: 85px 0 95px;
+    }
+
+    .ai-section-heading {
+        margin-bottom: 45px;
+    }
+
+    .ai-section-heading h2 {
+        font-size: clamp(42px, 11vw, 58px);
+    }
+
+    .ai-impact-item {
+        grid-template-columns: 40px 1fr 38px;
+
+        gap: 12px;
+
+        padding: 25px 0;
+    }
+
+    .ai-impact-item:hover {
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+
+    .ai-impact-main h3 {
+        font-size: 18px;
+    }
+
+    .ai-impact-main p {
+        margin-top: 8px;
+
+        font-size: 12px;
+    }
+
+    .ai-impact-symbol {
+        width: 32px;
+        height: 32px;
+
+        font-size: 13px;
+    }
+
+
+    /* =====================================================
+     DELIVERABLES
+  ===================================================== */
+
+    .ai-deliverables-section {
+        padding: 85px 0 95px;
+    }
+
+    .ai-deliverable {
+        grid-template-columns: 42px 1fr 34px;
+
+        gap: 10px;
+
+        min-height: auto;
+
+        padding: 25px 0;
+    }
+
+    .ai-deliverable-title {
+        grid-column: 2;
+    }
+
+    .ai-deliverable-description {
+        grid-column: 2 / 4;
+
+        margin-top: 4px;
+    }
+
+    .ai-deliverable-arrow {
+        grid-column: 3;
+        grid-row: 1;
+
+        width: 32px;
+        height: 32px;
+    }
+
+    .ai-deliverable-title h3 {
+        font-size: 17px;
+    }
+
+    .ai-deliverable-description p {
+        font-size: 12px;
+    }
+
+
+    /* =====================================================
+     CLOSING
+  ===================================================== */
+
+    .ai-closing-section {
+        padding: 80px 0 90px;
+    }
+
+    .ai-closing-content {
+        padding-top: 55px;
+    }
+
+    .ai-closing-content h2 {
+        font-size: clamp(43px, 12vw, 62px);
+    }
+
+    .ai-closing-footer {
+        margin-top: 55px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .ai-impact-item,
+    .ai-impact-symbol,
+    .ai-deliverable,
+    .ai-deliverable-arrow {
+        transition: none;
+    }
+
+}

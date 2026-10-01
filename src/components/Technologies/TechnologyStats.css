@@ -1,0 +1,53 @@
+.technology-stats {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  align-items: center;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 35px 20px;
+}
+
+.stat-item strong {
+  display: block;
+  font-size: 48px;
+  letter-spacing: -2px;
+}
+
+.stat-item span {
+  display: block;
+  margin-top: 5px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #777;
+  font-weight: 800;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 55px;
+  background: #ddd;
+}
+
+@media (max-width: 600px) {
+  .technology-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-divider {
+    width: 60px;
+    height: 1px;
+    margin: auto;
+  }
+
+  .stat-item {
+    padding: 25px;
+  }
+
+  .stat-item strong {
+    font-size: 40px;
+  }
+}

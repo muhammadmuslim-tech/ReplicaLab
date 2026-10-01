@@ -1,0 +1,498 @@
+/* =========================================
+   ABOUT HERO
+========================================= */
+
+.about-hero {
+  position: relative;
+
+  width: 100%;
+  min-height: calc(100vh - 90px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 95px 6vw 80px;
+
+  box-sizing: border-box;
+  overflow: hidden;
+
+  /* Pure white background */
+  background: #ffffff;
+  color: #0b0b0b;
+}
+
+
+/* =========================================
+   BACKGROUND GRID
+========================================= */
+
+.about-hero-grid {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  /*
+    Slightly darker than before,
+    but larger cells = fewer grid lines.
+  */
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.055) 4px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.055) 4px,
+      transparent 1px
+    );
+
+  background-size: 102px 102px;
+
+  opacity: 0.59;
+}
+
+
+/* Soft white fade so grid doesn't overpower content */
+
+.about-hero::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(255, 255, 255, 0.18) 0%,
+      rgba(255, 255, 255, 0.05) 48%,
+      rgba(255, 255, 255, 0) 72%
+    );
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.about-hero-inner {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1320px;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   EYEBROW
+========================================= */
+
+.about-hero-eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 16px;
+
+  margin-bottom: 38px;
+}
+
+.about-hero-eyebrow > span:not(.about-hero-eyebrow-line) {
+  color: #686868;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 0.24em;
+
+  white-space: nowrap;
+}
+
+.about-hero-eyebrow-line {
+  width: 48px;
+  height: 1px;
+
+  background: #9b9b9b;
+}
+
+
+/* =========================================
+   MAIN HEADING
+========================================= */
+
+.about-hero-title {
+  width: 100%;
+  max-width: 1280px;
+
+  margin: 0 auto;
+
+  color: #080808;
+
+  /*
+    Stronger than previous version.
+    Uses a clean enterprise sans-serif stack.
+  */
+  /* font-family:
+    "Arial",
+    "Helvetica Neue",
+    Helvetica,
+    sans-serif; */
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: clamp(60px, 6.2vw, 96px);
+
+  font-weight: 600;
+
+  line-height: 0.96;
+
+  letter-spacing: -0.065em;
+
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+/* Keep intentional desktop lines */
+
+.about-hero-title-line {
+  display: block;
+}
+
+.about-hero-title-second {
+  margin-top: 4px;
+}
+
+
+/* Gray highlighted words */
+
+.about-hero-highlight {
+  color: #707070;
+
+  font-weight: 300;
+
+  white-space: nowrap;
+}
+
+
+/* Dark second-half */
+
+.about-hero-dark {
+  color: #080808;
+
+  font-weight: 800;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.about-hero-description {
+  max-width: 850px;
+
+  margin: 42px auto 0;
+
+  color: #5e5e5e;
+
+  font-size: 17px;
+  font-weight: 400;
+
+  line-height: 1.65;
+
+  letter-spacing: -0.015em;
+}
+
+
+/* =========================================
+   META INFORMATION
+========================================= */
+
+.about-hero-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 18px;
+
+  margin-top: 48px;
+}
+
+.about-hero-bottom > span:not(.about-hero-dot) {
+  color: #696969;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.2em;
+
+  white-space: nowrap;
+}
+
+.about-hero-dot {
+  width: 4px;
+  height: 4px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #8e8e8e;
+}
+
+
+/* =========================================
+   SCROLL INDICATOR
+========================================= */
+
+.about-hero-scroll {
+  position: absolute;
+  z-index: 3;
+
+  left: 6vw;
+  bottom: 30px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+}
+
+.about-hero-scroll > span:first-child {
+  color: #777777;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 0.22em;
+
+  white-space: nowrap;
+}
+
+.about-hero-scroll-line {
+  width: 45px;
+  height: 1px;
+
+  background: #8d8d8d;
+}
+
+
+/* =========================================
+   LARGE / MEDIUM DESKTOP
+========================================= */
+
+@media (max-width: 1250px) {
+  .about-hero {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  .about-hero-title {
+    font-size: clamp(56px, 6.4vw, 80px);
+    letter-spacing: -0.06em;
+  }
+
+  .about-hero-description {
+    max-width: 760px;
+
+    margin-top: 35px;
+
+    font-size: 16px;
+  }
+
+  .about-hero-bottom {
+    margin-top: 40px;
+  }
+}
+
+
+/* =========================================
+   TABLET / SMALL LAPTOP
+========================================= */
+
+@media (max-width: 950px) {
+  .about-hero {
+    min-height: 720px;
+
+    padding:
+      110px
+      35px
+      90px;
+  }
+
+  .about-hero-grid {
+    background-size: 90px 90px;
+  }
+
+  .about-hero-eyebrow {
+    margin-bottom: 30px;
+  }
+
+  .about-hero-title {
+    max-width: 850px;
+
+    font-size: clamp(50px, 7vw, 67px);
+
+    line-height: 0.98;
+  }
+
+  .about-hero-description {
+    max-width: 650px;
+
+    margin-top: 30px;
+
+    font-size: 15px;
+  }
+
+  .about-hero-bottom {
+    margin-top: 34px;
+  }
+
+  .about-hero-scroll {
+    left: 35px;
+    bottom: 25px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+  .about-hero {
+    min-height: 680px;
+
+    padding:
+      100px
+      22px
+      75px;
+  }
+
+  .about-hero-grid {
+    background-size: 82px 82px;
+  }
+
+  .about-hero-eyebrow {
+    gap: 10px;
+
+    margin-bottom: 25px;
+  }
+
+  .about-hero-eyebrow-line {
+    width: 28px;
+  }
+
+  .about-hero-eyebrow > span:not(.about-hero-eyebrow-line) {
+    font-size: 8px;
+
+    letter-spacing: 0.18em;
+  }
+
+
+  /* Allow natural wrapping on mobile */
+
+  .about-hero-title-line {
+    display: inline;
+  }
+
+  .about-hero-title-second {
+    margin-top: 0;
+  }
+
+  .about-hero-title {
+    max-width: 600px;
+
+    font-size: clamp(43px, 12vw, 60px);
+
+    font-weight: 800;
+
+    line-height: 0.98;
+
+    letter-spacing: -0.06em;
+  }
+
+  .about-hero-highlight {
+    font-weight: 700;
+  }
+
+  .about-hero-description {
+    max-width: 500px;
+
+    margin-top: 26px;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+  }
+
+  .about-hero-bottom {
+    flex-wrap: wrap;
+
+    gap: 10px 13px;
+
+    margin-top: 30px;
+  }
+
+  .about-hero-bottom > span:not(.about-hero-dot) {
+    font-size: 7px;
+
+    letter-spacing: 0.15em;
+  }
+
+  .about-hero-scroll {
+    left: 22px;
+    bottom: 20px;
+  }
+
+  .about-hero-scroll > span:first-child {
+    font-size: 7px;
+  }
+
+  .about-hero-scroll-line {
+    width: 32px;
+  }
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 430px) {
+  .about-hero {
+    min-height: 650px;
+
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .about-hero-title {
+    font-size: clamp(39px, 11.5vw, 49px);
+
+    letter-spacing: -0.055em;
+  }
+
+  .about-hero-description {
+    font-size: 13px;
+  }
+
+  .about-hero-bottom {
+    max-width: 330px;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about-hero-scroll {
+    left: 18px;
+  }
+}

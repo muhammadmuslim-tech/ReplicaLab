@@ -1,0 +1,428 @@
+/* =========================================
+   MISSION & VISION
+========================================= */
+
+.mission-vision {
+  position: relative;
+  width: 100%;
+
+  padding: 70px 6vw;
+
+  box-sizing: border-box;
+
+  background: #f7f7f5;
+
+  overflow: hidden;
+}
+
+.mission-vision-container {
+  width: 100%;
+  max-width: 1450px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.mission-vision-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 24px;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.mission-vision-card {
+  position: relative;
+
+  min-height: 270px;
+
+  padding: 34px 38px 38px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #ffffff;
+
+  border: 1px solid #ddddda;
+
+  border-radius: 50px;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease,
+    background-color 0.35s ease;
+}
+
+
+/* Subtle top accent */
+
+.mission-vision-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 0;
+  height: 2px;
+
+  background: #111111;
+
+  transition: width 0.45s ease;
+}
+
+
+/* Hover */
+
+.mission-vision-card:hover {
+  transform: translateY(-5px);
+
+  border-color: #c5c5c1;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.055);
+}
+
+.mission-vision-card:hover::before {
+  width: 100%;
+}
+
+
+/* =========================================
+   CARD TOP
+========================================= */
+
+.mission-vision-card-top {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 22px;
+
+  border-bottom: 1px solid #ececea;
+}
+
+.mission-vision-number {
+  color: #111111;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+}
+
+.mission-vision-type {
+  color: #999999;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.22em;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.mission-vision-card-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 610px;
+
+  /* margin-top: auto; */
+
+  padding-top: 14px;
+}
+
+.mission-vision-card-content h2 {
+  margin: 0;
+
+  color: #0b0b0b;
+
+  font-family:
+    Arial,
+    "Helvetica Neue",
+    Helvetica,
+    sans-serif;
+
+  font-size: clamp(38px, 3.6vw, 55px);
+
+  font-weight: 800;
+
+  line-height: 0.98;
+
+  letter-spacing: -0.055em;
+}
+
+.mission-vision-card-content p {
+  max-width: 570px;
+
+  margin: 24px 0 0;
+
+  color: #666666;
+
+  font-size: 15px;
+  font-weight: 400;
+
+  line-height: 1.7;
+
+  letter-spacing: -0.01em;
+}
+
+
+/* =========================================
+   LARGE M / V BACKGROUND
+========================================= */
+
+.mission-vision-watermark {
+  position: absolute;
+
+  right: 20px;
+  bottom: -50px;
+
+  color: rgba(0, 0, 0, 0.025);
+
+  font-family:
+    Arial,
+    "Helvetica Neue",
+    Helvetica,
+    sans-serif;
+
+  font-size: 220px;
+  font-weight: 800;
+
+  line-height: 1;
+
+  pointer-events: none;
+
+  user-select: none;
+
+  transition:
+    transform 0.5s ease,
+    color 0.5s ease;
+}
+
+.mission-vision-card:hover .mission-vision-watermark {
+  color: rgba(0, 0, 0, 0.04);
+
+  transform: translate(-7px, -7px);
+}
+
+
+/* =========================================
+   SMALL DECORATIVE CORNER
+========================================= */
+
+.mission-vision-corner {
+  position: absolute;
+
+  right: 0;
+  top: 0;
+
+  width: 42px;
+  height: 42px;
+
+  pointer-events: none;
+}
+
+.mission-vision-corner::before,
+.mission-vision-corner::after {
+  content: "";
+
+  position: absolute;
+
+  background: #d5d5d2;
+}
+
+.mission-vision-corner::before {
+  width: 18px;
+  height: 1px;
+
+  top: 16px;
+  right: 14px;
+}
+
+.mission-vision-corner::after {
+  width: 1px;
+  height: 18px;
+
+  top: 8px;
+  right: 22px;
+}
+
+
+/* =========================================
+   LAPTOP
+========================================= */
+
+@media (max-width: 1200px) {
+  .mission-vision {
+    padding: 60px 5vw;
+  }
+
+  .mission-vision-card {
+    min-height: 300px;
+
+    padding:
+      30px
+      32px
+      34px;
+  }
+
+  .mission-vision-card-content {
+    padding-top: 34px;
+  }
+
+  .mission-vision-card-content p {
+    font-size: 14px;
+  }
+
+  .mission-vision-watermark {
+    font-size: 190px;
+  }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+  .mission-vision {
+    padding: 55px 35px;
+  }
+
+  .mission-vision-grid {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .mission-vision-card {
+    min-height: 270px;
+  }
+
+  .mission-vision-card-content {
+    max-width: 680px;
+  }
+
+  .mission-vision-card-content h2 {
+    font-size: 46px;
+  }
+
+  .mission-vision-card-content p {
+    max-width: 590px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .mission-vision {
+    padding: 45px 20px;
+  }
+
+  .mission-vision-grid {
+    gap: 15px;
+  }
+
+  .mission-vision-card {
+    min-height: 260px;
+
+    padding:
+      25px
+      24px
+      28px;
+  }
+
+  .mission-vision-card-top {
+    padding-bottom: 18px;
+  }
+
+  .mission-vision-card-content {
+    padding-top: 30px;
+  }
+
+  .mission-vision-card-content h2 {
+    font-size: 39px;
+  }
+
+  .mission-vision-card-content p {
+    margin-top: 18px;
+
+    font-size: 13px;
+
+    line-height: 1.65;
+  }
+
+  .mission-vision-watermark {
+    right: 5px;
+    bottom: -32px;
+
+    font-size: 145px;
+  }
+
+  .mission-vision-card:hover {
+    transform: none;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+  .mission-vision {
+    padding:
+      40px
+      16px;
+  }
+
+  .mission-vision-card {
+    min-height: 250px;
+
+    padding:
+      22px
+      20px
+      25px;
+  }
+
+  .mission-vision-card-content h2 {
+    font-size: 36px;
+  }
+
+  .mission-vision-number {
+    font-size: 9px;
+  }
+
+  .mission-vision-type {
+    font-size: 8px;
+  }
+}

@@ -1,0 +1,27 @@
+.use-cases-section {
+  margin-bottom: 38px;
+}
+
+.use-cases-list {
+  border-top: 1px solid #ddd;
+}
+
+.use-case {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-height: 55px;
+  border-bottom: 1px solid #ddd;
+}
+
+.use-case > span {
+  color: #999;
+  font-size: 10px;
+  font-weight: 800;
+  width: 25px;
+}
+
+.use-case strong {
+  font-size: 13px;
+  font-weight: 700;
+}

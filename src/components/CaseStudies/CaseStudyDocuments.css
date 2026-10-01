@@ -1,0 +1,282 @@
+/* =========================================
+   DOCUMENTS
+========================================= */
+
+.case-study-documents {
+  padding-top: 120px;
+}
+
+
+.case-study-documents-header {
+  padding-bottom: 50px;
+
+  border-bottom: 1px solid #ddddda;
+}
+
+
+.case-study-documents-header > span {
+  display: block;
+
+  margin-bottom: 18px;
+
+  color: #888888;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.2em;
+}
+
+
+.case-study-documents-header h2 {
+  margin: 0;
+
+  color: #111111;
+
+  font-size: clamp(45px, 5vw, 75px);
+
+  font-weight: 800;
+
+  line-height: 0.9;
+
+  letter-spacing: -0.065em;
+}
+
+
+.case-study-documents-header h2 span {
+  color: #929292;
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.case-study-documents-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 18px;
+
+  padding-top: 35px;
+}
+
+
+/* =========================================
+   DOCUMENT CARD
+========================================= */
+
+.case-study-document {
+  position: relative;
+
+  min-height: 340px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  padding: 25px;
+
+  border: 1px solid #d8d8d4;
+
+  background: #eeeeeb;
+
+  color: #111111;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.3s ease,
+    background-color 0.3s ease;
+}
+
+
+.case-study-document:hover {
+  transform: translateY(-6px);
+
+  border-color: #111111;
+
+  background: #e8e8e5;
+}
+
+
+/* =========================================
+   TOP
+========================================= */
+
+.case-study-document-top {
+  display: flex;
+
+  justify-content: space-between;
+
+  color: #888888;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+}
+
+
+.case-study-document-top span:first-child {
+  color: #111111;
+}
+
+
+/* =========================================
+   IMAGE PREVIEW
+========================================= */
+
+.case-study-document-preview {
+  position: absolute;
+
+  top: 60px;
+  right: 25px;
+
+  width: 125px;
+  height: 160px;
+
+  overflow: hidden;
+
+  border: 1px solid #d0d0cc;
+
+  background: #ffffff;
+
+  transform: rotate(3deg);
+
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+.case-study-document-preview img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.case-study-document-content {
+  max-width: 470px;
+
+  margin-top: auto;
+
+  padding-top: 80px;
+}
+
+
+.case-study-document-content h3 {
+  margin: 0;
+
+  font-size: clamp(30px, 3vw, 43px);
+
+  font-weight: 800;
+
+  line-height: 0.95;
+
+  letter-spacing: -0.05em;
+}
+
+
+.case-study-document-content p {
+  max-width: 420px;
+
+  margin: 18px 0 0;
+
+  color: #666666;
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.case-study-document-footer {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-top: 35px;
+
+  padding-top: 18px;
+
+  border-top: 1px solid #d1d1cd;
+
+  color: #777777;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+}
+
+
+.case-study-document-arrow {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 38px;
+  height: 38px;
+
+  border-radius: 50%;
+
+  background: #111111;
+
+  color: #ffffff;
+
+  font-size: 17px;
+
+  transition: transform 0.3s ease;
+}
+
+
+.case-study-document:hover .case-study-document-arrow {
+  transform: rotate(45deg);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+  .case-study-documents {
+    padding-top: 80px;
+  }
+
+  .case-study-documents-grid {
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+  }
+
+  .case-study-document {
+    min-height: 310px;
+  }
+
+  .case-study-document-preview {
+    width: 95px;
+    height: 125px;
+  }
+}

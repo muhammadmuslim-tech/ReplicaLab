@@ -1,0 +1,945 @@
+/* =========================================
+   WHY CHOOSE REPLICA LAB
+========================================= */
+
+.why-replica {
+  position: relative;
+  width: 100%;
+
+  padding: 65px 6vw 70px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+  color: #111111;
+
+  overflow: hidden;
+}
+
+.why-replica-container {
+  width: 100%;
+  max-width: 1450px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.why-replica-header {
+  max-width: 850px;
+  margin-bottom: 24px;
+}
+
+.why-replica-header h2 {
+  margin: 0;
+
+  color: #111111;
+
+  font-family:
+    Arial,
+    "Helvetica Neue",
+    Helvetica,
+    sans-serif;
+
+  font-size: clamp(48px, 5vw, 72px);
+  font-weight: 800;
+
+  line-height: 0.96;
+  letter-spacing: -0.06em;
+}
+
+.why-replica-header h2 span {
+  color: #929292;
+}
+
+.why-replica-header > p {
+  max-width: 700px;
+
+  margin: 22px 0 0;
+
+  color: #686868;
+
+  font-size: 15px;
+  font-weight: 400;
+
+  line-height: 1.65;
+  letter-spacing: -0.01em;
+}
+
+
+/* =========================================
+   DESKTOP TIMELINE WRAPPER
+========================================= */
+
+.why-timeline-desktop {
+  display: block;
+
+  width: 100%;
+  padding: 0;
+}
+
+
+/* =========================================
+   TIMELINE
+========================================= */
+
+.why-timeline {
+  position: relative;
+
+  width: calc(100% - 20px);
+  height: 92px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+
+/* =========================================
+   BASE HORIZONTAL LINE
+========================================= */
+
+.why-timeline-line {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  bottom: 15px;
+
+  height: 2px;
+
+  background: #d4d4d1;
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   ACTIVE PROGRESS LINE
+========================================= */
+
+.why-timeline-progress {
+  position: absolute;
+
+  left: 0;
+  bottom: 15px;
+
+  height: 2px;
+
+  background: #111111;
+
+  pointer-events: none;
+
+  transition:
+    width 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+/* =========================================
+   TIMELINE BUTTON
+========================================= */
+
+.why-timeline-item {
+  position: relative;
+  z-index: 2;
+
+  width: 52px;
+  height: 92px;
+
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: flex-end;
+
+  border: none;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  font: inherit;
+
+  outline: none;
+}
+
+
+/* =========================================
+   TIMELINE NUMBER
+========================================= */
+
+.why-timeline-number {
+  display: block;
+
+  margin-bottom: 16px;
+
+  color: #9a9a9a;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  line-height: 1;
+  letter-spacing: 0.14em;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.why-timeline-item:hover .why-timeline-number,
+.why-timeline-item.active .why-timeline-number {
+  color: #111111;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   TIMELINE NODE
+========================================= */
+
+.why-timeline-node {
+  position: relative;
+  z-index: 3;
+
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  box-sizing: border-box;
+
+  border: 1px solid #bdbdba;
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  transition:
+    border-color 0.3s ease,
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.why-timeline-node > span {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #a8a8a5;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+/* =========================================
+   PASSED NODES
+========================================= */
+
+.why-timeline-item.passed .why-timeline-node {
+  border-color: #111111;
+}
+
+.why-timeline-item.passed .why-timeline-node > span {
+  background: #111111;
+}
+
+
+/* =========================================
+   ACTIVE NODE
+========================================= */
+
+.why-timeline-item.active .why-timeline-node {
+  border-color: #111111;
+
+  background: #111111;
+
+  transform: scale(1.1);
+}
+
+.why-timeline-item.active .why-timeline-node > span {
+  background: #ffffff;
+
+  transform: scale(0.85);
+}
+
+
+/* =========================================
+   KEYBOARD FOCUS
+========================================= */
+
+.why-timeline-item:focus-visible .why-timeline-node {
+  outline: 2px solid #111111;
+
+  outline-offset: 4px;
+}
+
+
+/* =========================================
+   ACTIVE CONTENT AREA
+========================================= */
+
+.why-active-content {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.9fr)
+    1px
+    minmax(0, 1.1fr);
+
+  gap: 55px;
+
+  align-items: center;
+
+  min-height: 225px;
+
+  margin-top: 30px;
+
+  padding: 32px 20px;
+
+  box-sizing: border-box;
+
+  border-top: 1px solid #d8d8d5;
+  border-bottom: 1px solid #d8d8d5;
+
+  animation:
+    whyContentReveal
+    0.42s
+    cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+/* =========================================
+   ACTIVE CONTENT - LEFT
+========================================= */
+
+.why-active-left {
+  min-width: 0;
+}
+
+.why-active-count {
+  display: block;
+
+  margin-bottom: 22px;
+
+  color: #111111;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+}
+
+.why-active-count span {
+  color: #a2a2a2;
+}
+
+.why-active-left h3 {
+  max-width: 560px;
+
+  margin: 0;
+
+  color: #111111;
+
+  font-family:
+    Arial,
+    "Helvetica Neue",
+    Helvetica,
+    sans-serif;
+
+  font-size: clamp(43px, 4.7vw, 68px);
+
+  font-weight: 800;
+
+  line-height: 0.94;
+  letter-spacing: -0.06em;
+}
+
+
+/* =========================================
+   CENTER DIVIDER
+========================================= */
+
+.why-active-divider {
+  width: 1px;
+  height: 120px;
+
+  background: #d8d8d5;
+}
+
+
+/* =========================================
+   ACTIVE CONTENT - RIGHT
+========================================= */
+
+.why-active-right {
+  max-width: 650px;
+}
+
+.why-active-label {
+  display: block;
+
+  margin-bottom: 19px;
+
+  color: #9a9a9a;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 0.22em;
+}
+
+.why-active-right p {
+  margin: 0;
+
+  color: #555555;
+
+  font-size: 15px;
+  font-weight: 400;
+
+  line-height: 1.75;
+  letter-spacing: -0.01em;
+}
+
+
+/* =========================================
+   CONTENT CHANGE ANIMATION
+========================================= */
+
+@keyframes whyContentReveal {
+  from {
+    opacity: 0;
+
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================
+   MOBILE SELECTOR
+   Hidden because mobile uses timeline too
+========================================= */
+
+.why-mobile-selector {
+  display: none;
+}
+
+
+/* =========================================
+   LAPTOP
+========================================= */
+
+@media (max-width: 1200px) {
+  .why-replica {
+    padding: 58px 5vw 62px;
+  }
+
+  .why-replica-header {
+    margin-bottom: 24px;
+  }
+
+  .why-replica-header h2 {
+    font-size: clamp(48px, 5.5vw, 68px);
+  }
+
+  .why-timeline {
+    width: calc(100% - 15px);
+    height: 88px;
+  }
+
+  .why-timeline-item {
+    height: 88px;
+  }
+
+  .why-active-content {
+    grid-template-columns:
+      minmax(0, 0.9fr)
+      1px
+      minmax(0, 1.1fr);
+
+    gap: 42px;
+
+    min-height: 210px;
+
+    margin-top: 27px;
+
+    padding: 30px 15px;
+  }
+
+  .why-active-divider {
+    height: 105px;
+  }
+
+  .why-active-right p {
+    font-size: 14px;
+  }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 850px) {
+  .why-replica {
+    padding: 52px 35px 56px;
+  }
+
+  .why-replica-header {
+    margin-bottom: 22px;
+  }
+
+  .why-replica-header h2 {
+    font-size: 55px;
+  }
+
+  .why-replica-header > p {
+    font-size: 14px;
+  }
+
+  .why-timeline {
+    width: 100%;
+    height: 84px;
+  }
+
+  .why-timeline-item {
+    width: 46px;
+    height: 84px;
+  }
+
+  .why-timeline-number {
+    margin-bottom: 14px;
+
+    font-size: 10px;
+  }
+
+  .why-timeline-node {
+    width: 27px;
+    height: 27px;
+  }
+
+  .why-timeline-line,
+  .why-timeline-progress {
+    bottom: 13px;
+  }
+
+  .why-active-content {
+    gap: 30px;
+
+    min-height: 195px;
+
+    margin-top: 24px;
+
+    padding: 27px 5px;
+  }
+
+  .why-active-left h3 {
+    font-size: 48px;
+  }
+
+  .why-active-divider {
+    height: 95px;
+  }
+
+  .why-active-right p {
+    font-size: 13px;
+
+    line-height: 1.7;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+  .why-replica {
+    padding: 46px 22px 50px;
+  }
+
+
+  /* =====================================
+     HEADER
+  ===================================== */
+
+  .why-replica-header {
+    margin-bottom: 18px;
+  }
+
+  .why-replica-header h2 {
+    font-size: clamp(42px, 12vw, 53px);
+
+    line-height: 0.97;
+  }
+
+  .why-replica-header > p {
+    max-width: 500px;
+
+    margin-top: 17px;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+  }
+
+
+  /* =====================================
+     KEEP HORIZONTAL TIMELINE ON MOBILE
+  ===================================== */
+
+  .why-timeline-desktop {
+    display: block;
+
+    width: 100%;
+
+    padding: 0;
+  }
+
+  .why-mobile-selector {
+    display: none;
+  }
+
+
+  /* =====================================
+     MOBILE TIMELINE
+  ===================================== */
+
+  .why-timeline {
+    position: relative;
+
+    width: calc(100% - 8px);
+    height: 68px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+
+  /* Gray line */
+
+  .why-timeline-line {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    bottom: 10px;
+
+    height: 1px;
+
+    background: #d2d2cf;
+
+    pointer-events: none;
+  }
+
+
+  /* Active black line */
+
+  .why-timeline-progress {
+    position: absolute;
+
+    left: 0;
+    bottom: 10px;
+
+    height: 1px;
+
+    background: #111111;
+
+    pointer-events: none;
+
+    transition:
+      width 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+
+  /* Each timeline item */
+
+  .why-timeline-item {
+    position: relative;
+    z-index: 2;
+
+    width: 28px;
+    height: 68px;
+
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: flex-end;
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    font: inherit;
+
+    outline: none;
+  }
+
+
+  /* Number */
+
+  .why-timeline-number {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #999999;
+
+    font-size: 7px;
+    font-weight: 700;
+
+    line-height: 1;
+
+    letter-spacing: 0.08em;
+
+    transition:
+      color 0.3s ease;
+  }
+
+  .why-timeline-item:hover .why-timeline-number,
+  .why-timeline-item.active .why-timeline-number {
+    color: #111111;
+
+    transform: none;
+  }
+
+
+  /* Circle */
+
+  .why-timeline-node {
+    position: relative;
+    z-index: 3;
+
+    width: 21px;
+    height: 21px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    box-sizing: border-box;
+
+    border: 1px solid #bdbdba;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    transition:
+      border-color 0.3s ease,
+      background-color 0.3s ease,
+      transform 0.3s ease;
+  }
+
+  .why-timeline-node > span {
+    width: 4px;
+    height: 4px;
+
+    border-radius: 50%;
+
+    background: #aaaaa7;
+
+    transition:
+      background-color 0.3s ease;
+  }
+
+
+  /* Passed points */
+
+  .why-timeline-item.passed .why-timeline-node {
+    border-color: #111111;
+  }
+
+  .why-timeline-item.passed .why-timeline-node > span {
+    background: #111111;
+  }
+
+
+  /* Active point */
+
+  .why-timeline-item.active .why-timeline-node {
+    border-color: #111111;
+
+    background: #111111;
+
+    transform: scale(1.08);
+  }
+
+  .why-timeline-item.active .why-timeline-node > span {
+    background: #ffffff;
+
+    transform: none;
+  }
+
+
+  /* =====================================
+     ACTIVE CONTENT MOBILE
+  ===================================== */
+
+  .why-active-content {
+    display: block;
+
+    min-height: 0;
+
+    margin-top: 22px;
+
+    padding: 25px 0 4px;
+
+    border-top: 1px solid #d8d8d5;
+    border-bottom: none;
+  }
+
+  .why-active-count {
+    margin-bottom: 17px;
+
+    font-size: 9px;
+  }
+
+  .why-active-left h3 {
+    max-width: 100%;
+
+    font-size: clamp(39px, 11vw, 50px);
+
+    line-height: 0.97;
+  }
+
+  .why-active-divider {
+    width: 40px;
+    height: 1px;
+
+    margin: 23px 0;
+
+    background: #111111;
+  }
+
+  .why-active-label {
+    margin-bottom: 14px;
+
+    font-size: 7px;
+  }
+
+  .why-active-right {
+    max-width: 100%;
+  }
+
+  .why-active-right p {
+    max-width: 500px;
+
+    font-size: 13px;
+
+    line-height: 1.65;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 420px) {
+  .why-replica {
+    padding: 42px 18px 46px;
+  }
+
+  .why-replica-header {
+    margin-bottom: 16px;
+  }
+
+  .why-replica-header h2 {
+    font-size: 42px;
+  }
+
+  .why-replica-header > p {
+    font-size: 12px;
+
+    line-height: 1.6;
+  }
+
+
+  /* Timeline still remains horizontal */
+
+  .why-timeline {
+    width: 100%;
+    height: 64px;
+  }
+
+  .why-timeline-item {
+    width: 24px;
+    height: 64px;
+  }
+
+  .why-timeline-number {
+    margin-bottom: 9px;
+
+    font-size: 6.5px;
+  }
+
+  .why-timeline-node {
+    width: 19px;
+    height: 19px;
+  }
+
+  .why-timeline-node > span {
+    width: 3px;
+    height: 3px;
+  }
+
+  .why-timeline-line,
+  .why-timeline-progress {
+    bottom: 9px;
+  }
+
+
+  /* Active content */
+
+  .why-active-content {
+    margin-top: 20px;
+
+    padding-top: 23px;
+  }
+
+  .why-active-left h3 {
+    font-size: 39px;
+  }
+
+  .why-active-right p {
+    font-size: 12.5px;
+  }
+}
